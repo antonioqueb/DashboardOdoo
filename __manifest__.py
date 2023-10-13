@@ -12,7 +12,6 @@
         ]
     },
     'data': [
-        'security/ir.model.access.xml',  # Agregando el archivo de seguridad
         'views/menu.xml',  # Añadiendo la nueva vista XML
     ],
     'installable': True,
