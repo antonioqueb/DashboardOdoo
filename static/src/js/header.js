@@ -1,6 +1,7 @@
 /** @odoo-module **/
 
 import { Component, tags } from "@odoo/owl";
+import { registry } from "@odoo/owl";
 
 class Header extends Component {
     static template = tags.xml/*xml*/ `
@@ -15,8 +16,7 @@ class Header extends Component {
 }
 
 //Register the component to be used in the template
-
 odoo.define('tobaccometricspro.header', function (require) {
+    registry.category("actions").add("tobaccometricspro_header", Header); // Registering the action
     return Header;
-
 });

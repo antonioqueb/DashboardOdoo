@@ -1,6 +1,6 @@
 {
     'name': 'tobaccometricspro',
-    'version': '1.0.0.0',  # Aquí puedes aumentar la versión
+    'version': '1.0.0.1', 
     'category': 'Administration',
     'summary': 'Herramientas de análisis y visualización para la industria tabacalera.',
     'author': 'Antonio Queb',
@@ -12,8 +12,7 @@
         ]
     },
     'data': [
-        'views/menu.xml',  # Añadiendo la nueva vista XML
-    ],
+        'views/menu.xml'
     'installable': True,
     'application': True,
 }
