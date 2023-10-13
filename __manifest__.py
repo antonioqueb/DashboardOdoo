@@ -13,6 +13,7 @@
     },
     'data': [
         'views/menu.xml'
+    ],
     'installable': True,
     'application': True,
 }
