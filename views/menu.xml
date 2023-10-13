@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_open_header" model="ir.actions.client">
+        <field name="name">Hello World</field>
+        <field name="tag">header</field>  <!-- Este es el identificador de tu componente JS -->
+    </record>
+
+    <menuitem id="menu_hello_world"
+              name="Hello World"
+              action="action_open_header"
+              parent="base.menu_administration"
+              sequence="20"/>
+</odoo>
