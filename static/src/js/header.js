@@ -15,8 +15,10 @@ class Header extends Component {
     `;
 }
 
-//Register the component to be used in the template
+console.log("JS file is loaded");  // Agrega esta línea para verificar que el archivo JS se está cargando.
+
+// Register the component to be used in the template
 odoo.define('tobaccometricspro.header', function (require) {
-    registry.category("actions").add("tobaccometricspro_header", Header); // Registering the action
+    registry.category("actions").add("tobaccometricspro_header", Header); // Esta línea registra la acción.
     return Header;
 });
