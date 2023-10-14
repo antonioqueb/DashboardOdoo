@@ -17,11 +17,9 @@ export class MetricCard extends Component {
         }
 
         if (name === "'Calidad'") {
-            return num + '%';  // Agrega el símbolo de porcentaje al final del número
-        }
+            return num + '%'; }
 
 
-        // Utiliza la opción de configuración regional 'en-US' para obtener el formato deseado
         return num.toLocaleString('en-US');
     }
 }
