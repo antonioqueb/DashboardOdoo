@@ -55,8 +55,8 @@
                                        <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
-                                    
                                 </div>
+                                <canvas t-ref="chart" width="400" height="400"></canvas>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,6 @@
                                         <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
-                                    
                                 </div>
                             </div>
                         </div>
