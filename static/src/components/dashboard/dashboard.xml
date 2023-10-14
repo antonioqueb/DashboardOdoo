@@ -56,7 +56,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                                <Dashboard type="bar" title="Resumen de resultados" data={myData} />
+                                <ChartRenderer type="'bar'" title="'Resumen de resultados'"/>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                             <Dashboard type="bar" title="Resumen de resultados" data={myDataProductos} />
+                             <ChartRenderer type="'line'" title="'Crecimiento por producto'"/>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                                             <span class="fa fa-arrow-right text-white"/>
                                         </div>
                                     </div>
-                                    <ChartRenderer type="'line'" title="'Ventas por producto'"/>
+                                    <ChartRenderer type="'ine'" title="'Ventas por producto'"/>
                                 </div>
                             </div>
                         </div>
