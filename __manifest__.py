@@ -12,7 +12,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'TobaccoMetricsPro/static/src/components/**/*.js'
+            'TobaccoMetricsPro/static/src/components/dashboard/dashboard.js'
         ]
     },
 
