@@ -13,7 +13,7 @@
                                 <span t-esc="props.porcentage" />%
                         </span>
                     </span>
-                    <span> desde el ultimo periodo.</span>
+                    <span style="font-size:11px"> desde el ultimo periodo.</span>
                 </div>
                 </div>
             </div>
