@@ -1,8 +1,7 @@
 /** @odoo-module **/
 
-import { Component, tags } from "@odoo/owl";
-
-const { xml } = tags;
+import { Component } from "@odoo/owl";
+import { xml } from "@odoo/owl";
 
 class Header extends Component {
     static template = xml/*xml*/ `
@@ -16,10 +15,8 @@ class Header extends Component {
     `;
 }
 
-// Verifica si este log aparece en la consola del navegador
 console.log("Header component loaded");
 
-// Register the component to be used in the template 
 odoo.define('TobaccoMetricsPro.header', function (require) {
     return Header;
 });
