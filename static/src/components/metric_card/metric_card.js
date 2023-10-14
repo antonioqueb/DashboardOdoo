@@ -18,7 +18,7 @@ export class MetricCard extends Component {
 
         // Verifica si el nombre es "Calidad" para manejarlo como un porcentaje
         if (name === "'Calidad'") {
-            return num + '%';  // Agrega el símbolo de porcentaje al final del número
+            return num + '%';  // Agrega el símbolo de dólar y porcentaje al final del número
         }
 
         // Para otros casos, agrega el símbolo del dólar
