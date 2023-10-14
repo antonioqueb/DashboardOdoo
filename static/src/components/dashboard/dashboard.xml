@@ -71,6 +71,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
+                                <canvas t-ref="chart" width="400" height="200"></canvas>
                             </div>
                         </div>
                     </div>
