@@ -61,7 +61,7 @@ export class Dashboard extends Component {
             };
             if (this.chartRef.el) {
                 new Chart(this.chartRef.el.getContext('2d'), {
-                    type: 'doughnut',
+                    type: 'bar',
                     data: data,
                     options: {
                         title: {
