@@ -23,8 +23,25 @@
                         </div>
                     </div>
                     <div class="row">
-                        <MetricCard/>
+                        <MetricCard 
+                            name="Ventas"
+                            value="39,936,232"
+                            porcentage="10"
+                        />
+                        <MetricCard 
+                            name="Costos"
+                            value="9,032,570"
+                            porcentage="-10"
+                        />
+                        <MetricCard 
+                            name="Calidad"
+                            value="90%"
+                            porcentage="10"
+                        />
+                        
+
                     </div>
+               
                 </div>
                 <div class="col-lg-5"></div>
 
