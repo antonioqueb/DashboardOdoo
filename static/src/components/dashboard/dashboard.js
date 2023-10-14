@@ -2,12 +2,17 @@
 
 import { registry } from "@web/core/registry";
 import { MetricCard } from "../metric_card/metric_card.js";
-const { Component, tags } = owl;
+import { loadJS } from "@web/core/assets";
+
+const { Component, tags, onWillStart, useRef, onMounted } = owl;
 
 export class Dashboard extends Component {
-    constructor() {
-        super(...arguments);
-        console.log("Dashboard component created");
+    setup () {
+
+        onWillStart(async () => {
+            await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js");
+        });
+
     }
 }
 
