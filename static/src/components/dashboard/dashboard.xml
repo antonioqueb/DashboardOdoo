@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo>
+
 <templates xml:space="preserve">
     <t t-name="TobaccoMetricsPro.dashboard">
         <h1>Dashboard Dirección General</h1>
     </t>
 </templates>
-</odoo>
