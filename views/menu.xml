@@ -3,11 +3,11 @@
     <!-- Define una acción -->
     <record id="action_open_header" model="ir.actions.client">
         <field name="name">Open Header</field>
-        <field name="tag" eval="tobaccometricspro.header" /> <!-- Cambiado a un nombre más específico -->
-      <!--  <field name="params" eval="{'js_class': 'tobaccometricspro.header'}"/> --> <!-- Asegúrate de que esta clase JS existe y es accesible -->
+        <field name="tag">tobaccometricspro.header</field>
     </record>
 
-    
+
+
     <menuitem id="menu_hello_world"
               name="Hello World"
               action="action_open_header"
