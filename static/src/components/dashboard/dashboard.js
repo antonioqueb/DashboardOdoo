@@ -14,36 +14,76 @@ export class Dashboard extends Component {
         });
 
         onMounted(()=>{
-            const data = [
-                { year: 2010, count: 10 },
-                { year: 2011, count: 20 },
-                { year: 2012, count: 15 },
-                { year: 2013, count: 25 },
-                { year: 2014, count: 22 },
-                { year: 2015, count: 30 },
-                { year: 2016, count: 28 },
-              ];
-            
-              new Chart(
-                this.chartRef.el.getContext('2d'),
-                {
-                  type: 'bar',
-                  data: {
-                    labels: data.map(row => row.year),
-                    datasets: [
-                      {
-                        label: 'Acquisitions by year',
-                        data: data.map(row => row.count)
-                      }
-                    ]
-                  }
-                }
-              );
-
-        })
-
+            const data = {
+                labels: ['Mayo', 'Junio', 'Julio'],
+                datasets: [
+                    {
+                        label: 'Ventas netas',
+                        data: [139, 135, 139],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    },
+                    {
+                        label: 'Costo neto',
+                        data: [52, 54, 52],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    },
+                    {
+                        label: 'Utilidad Bruta',
+                        data: [87, 80, 87],
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                    },
+                    {
+                        label: 'Gasto de admón.',
+                        data: [7, 14, 6],
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    },
+                    {
+                        label: 'Gasto de Venta',
+                        data: [25, 23, 30],
+                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    },
+                    {
+                        label: 'Gastos Totales',
+                        data: [32, 37, 37],
+                        backgroundColor: 'rgba(201, 203, 207, 0.2)',
+                    },
+                    {
+                        label: 'Impuestos Federales',
+                        data: [8, 7, 7],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    },
+                    {
+                        label: 'Utilidad Neta',
+                        data: [48, 37, 43],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    },
+                ],
+            };
+        
+            new Chart(document.getElementById('myChart').getContext('2d'), {
+                type: 'bar',
+                data: data,
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Valores en Mn Mxn (millones)',
+                        fontSize: 16
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                        },
+                    },
+                },
+            });
+        }
+        );
     }
 }
+
 
 Dashboard.template = "TobaccoMetricsPro.Dashboard";
 Dashboard.components = { MetricCard };
