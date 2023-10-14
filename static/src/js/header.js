@@ -1,9 +1,10 @@
 /** @odoo-module **/
 
-import { Component } from "@odoo/owl";
-import { xml } from "@odoo/owl";
+import { Component, tags } from "@odoo/owl";
 
-class Header extends Component {
+const { xml } = tags;
+
+export class Header extends Component {
     static template = xml/*xml*/ `
         <header>
             <h1>Tobacco Metrics Pro</h1>
@@ -15,8 +16,5 @@ class Header extends Component {
     `;
 }
 
+// Verifica si este log aparece en la consola del navegador
 console.log("Header component loaded");
-
-odoo.define('TobaccoMetricsPro.header', function (require) {
-    return Header;
-});
