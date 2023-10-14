@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="TobaccoMetricsPro.Dashboard" owl="1">
-       <div class="vh-100 overflow-auto bg-muted">
+        <div class="vh-100 overflow-auto bg-muted">
             <div class="row m-3">
                 <div class="col-lg-12">
                     <div class="row">
@@ -10,7 +10,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h1 class="text-primary fw-bold">Dirección General</h1>
-                                   <div class="width: 60%;">
+                                    <div style="width: 60%;"> <!-- Corrección de error tipográfico en la declaración de estilo -->
                                         <select class="form-select custom-select-style">
                                             <option value="0">Seleccione Periodo</option>
                                             <option value="7">Ultimos 7 días</option>
@@ -44,50 +44,41 @@
                             value="98"
                             porcentage="3"
                         />
-                       
-                        
-
                     </div>
                 </div>
                 <div class="col-lg-6 ">
-                <div class="row">
-                <div class="col m-0 p-0">
+                    <div class="row">
+                        <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="text-secundary fw-bold">Resumen de Resultados</h1>
-                                   
-                                <div class="width: 100%;">
-                                    <button class="btn btn-link" type="button">
-                                        <i class="bi bi-list-dark"></i>
-                                    </button>
-                            
+                                    <h1 class="text-secondary fw-bold">Resumen de Resultados</h1> <!-- Corregido el error tipográfico -->
+                                    <div style="width: 100%;">
+                                        <button class="btn btn-link" type="button" style="color: black;">  <!-- Estilo agregado para cambiar el color del ícono -->
+                                            <i class="bi bi-list"></i>  <!-- Clase del ícono actualizada -->
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
-                
-               </div>
                 <div class="col-lg-6">
-                 <div class="row">
-                 <div class="col m-0 p-0">
+                    <div class="row">
+                        <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="text-secundary fw-bold">Crecimiento por producto</h1>
-                                   <div class="width: 100%;">
-                                    <button class="btn btn-link" type="button">
-                                        <i class="bi bi-list-dark"></i>
-                                    </button>
-                            
+                                    <h1 class="text-secondary fw-bold">Crecimiento por producto</h1> <!-- Corregido el error tipográfico -->
+                                    <div style="width: 100%;">
+                                        <button class="btn btn-link" type="button" style="color: black;">  <!-- Estilo agregado para cambiar el color del ícono -->
+                                            <i class="bi bi-list"></i>  <!-- Clase del ícono actualizada -->
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                 </div>
+                    </div>
                 </div>
-
-
             </div>
-       </div>
+        </div>
     </t>
 </templates>
