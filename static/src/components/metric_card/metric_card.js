@@ -3,10 +3,23 @@
 const { Component } = owl;
 
 export class MetricCard extends Component {
+    get formattedValue() {
+        return this.formatNumber(this.props.value);
+    }
+
     formatNumber(num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        if (!num) {
+            return '0';
+        }
+        
+        if (typeof num === 'string') {
+            num = parseInt(num, 10);
+        }
+
+        return num.toLocaleString(); // Utilizar toLocaleString para una formateación más sencilla y confiable
     }
 }
+
 
 
 MetricCard.template = "TobaccoMetricsPro.MetricCard";

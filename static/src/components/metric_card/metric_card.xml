@@ -3,7 +3,8 @@
     <t t-name="TobaccoMetricsPro.MetricCard" owl="1">
         <div class="col-lg-3 m-0-p-0">
             <div class="shadow-sm border m-1 p-2 bg-white text-center">
-                <div class="h1 fw-bold text-dark" style="font-size:25px"><span t-esc="props.value" /></div>
+                <!-- Aquí es donde hacemos el cambio, usando formattedValue en lugar de props.value -->
+                <div class="h1 fw-bold text-dark" style="font-size:25px"><span t-esc="formattedValue" /></div>
                 <div class="h3 text-muted" style="font-size:20px">
                     <span t-esc="props.name" />
                 </div>
