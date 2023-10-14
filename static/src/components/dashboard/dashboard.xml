@@ -27,17 +27,17 @@
                         <MetricCard 
                             name="'Ventas'"
                             value="39674578"
-                            porcentage="10"
+                            porcentage="16"
                         />
                         <MetricCard 
                             name="'Costos'"
                             value="9088083"
-                            porcentage="-10"
+                            porcentage="-4"
                         />
                         <MetricCard 
                             name="'Utilidad'"
                             value="43464355"
-                            porcentage="10"
+                            porcentage="16"
                         />
                         <MetricCard 
                             name="'Calidad'"
