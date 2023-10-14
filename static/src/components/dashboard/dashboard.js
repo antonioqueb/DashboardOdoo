@@ -61,7 +61,7 @@ export class Dashboard extends Component {
             };
             if (this.chartRef.el) {
                 new Chart(this.chartRef.el.getContext('2d'), {
-                    type: 'polarArea',
+                    type: 'doughnut',
                     data: data,
                     options: {
                         title: {
