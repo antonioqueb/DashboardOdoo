@@ -3,7 +3,7 @@
     <!-- Define una acción -->
     <record id="action_open_header" model="ir.actions.client">
         <field name="name">Open Header</field>
-        <field name="tag">header</field>
+        <field name="tag">TobaccoMetricsPro.header</field> <!-- Cambiado para coincidir con la definición de JS -->
     </record>
 
     <menuitem id="menu_hello_world"
