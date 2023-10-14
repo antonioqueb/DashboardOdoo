@@ -3,7 +3,6 @@
     <!-- Define una acción -->
     <record id="action_open_header" model="ir.actions.client">
         <field name="name">Open Header</field>
-        <field name="tag">TobaccoMetricsPro.Dashboard</field>  <!-- Esto debería coincidir con el nombre definido en odoo.define en tu JS -->
     </record>
 
 
