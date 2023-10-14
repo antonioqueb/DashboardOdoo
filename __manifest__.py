@@ -7,9 +7,7 @@
     'website': 'https://www.fingrow.co',
     'depends': ['base', 'web', 'sale','board'],
     'data': [
-        'views/menu.xml',
-        'TobaccoMetricsPro/static/src/components/dashboard/dashboard.xml',
-        
+        'views/menu.xml'
     ],
     'assets': {
         'web.assets_backend': [
@@ -17,9 +15,7 @@
             'TobaccoMetricsPro/static/src/components/dashboard/dashboard.xml',
         ]
     },
-
     'installable': True,
     'application': True,
     'auto_install': False,
-
 }
