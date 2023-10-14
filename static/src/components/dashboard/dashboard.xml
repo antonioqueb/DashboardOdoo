@@ -51,7 +51,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="fw-bold" style="font-size:18px">Resumen de Resultados</h1> <!-- Corregido el error tipográfico -->
+                                    <h2 class="fw-bold" style="font-size:18px">Resumen de Resultados</h2> <!-- Corregido el error tipográfico -->
                                     <div style="width: 100%;">
                                         <button class="btn btn-link" type="button" style="color: black;">  <!-- Estilo agregado para cambiar el color del ícono -->
                                             <i class="bi bi-list"></i>  <!-- Clase del ícono actualizada -->
@@ -62,12 +62,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 ">
                     <div class="row">
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="fw-bold" tyle="font-size:18px">Crecimiento por producto</h1> <!-- Corregido el error tipográfico -->
+                                    <h2 class="fw-bold" style="font-size:18px">Crecimiento por producto</h2> <!-- Corregido el error tipográfico -->
                                     <div style="width: 100%;">
                                         <button class="btn btn-link" type="button" style="color: black;">  <!-- Estilo agregado para cambiar el color del ícono -->
                                             <i class="bi bi-list"></i>  <!-- Clase del ícono actualizada -->
