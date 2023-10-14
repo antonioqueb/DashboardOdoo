@@ -22,17 +22,16 @@ export class MetricCard extends Component {
         switch (name.trim()) {
             case 'Calidad':
                 console.log("Es Calidad");
-                return num.toFixed(2) + '%'; // Agregué toFixed(2) para mostrar dos decimales
+                return (num.toFixed(1) + '%').toLocaleString(); // Usando toLocaleString para formatear números
             case 'Costos':
             case 'Utilidad':
                 console.log(name.trim() + " en dólares");
-                return '$' + num.toFixed(2).toLocaleString('en-US'); // Agregué toFixed(2) para mostrar dos decimales
+                return '$' + num.toFixed().toLocaleString('en-US'); // Arreglando el orden de toFixed y toLocaleString
             default:
                 console.log("Caso no manejado para", name.trim());
-                return num.toString();
+                return num.toLocaleString(); // Usando toLocaleString para formatear números
         }
     }
-    
 }
 
 MetricCard.template = "TobaccoMetricsPro.MetricCard";
