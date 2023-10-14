@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <TobaccoMetricsPro.MetricCard/>
+                        <MetricCard/>
                     </div>
                 </div>
                 <div class="col-lg-5"></div>
