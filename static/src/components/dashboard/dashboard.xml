@@ -50,11 +50,45 @@
                     </div>
                 </div>
                 <div class="col-lg-6 ">
-                <h1 class="text-primary fw-bold">Grafico 1</h1>
+                <div class="row">
+                <div class="col m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h1 class="text-primary fw-bold">Resumen de Resultados</h1>
+                                   <div class="width: 60%;">
+                                        <select class="form-select custom-select-style">
+                                            <option value="0">Seleccione Periodo</option>
+                                            <option value="7">Ultimos 7 días</option>
+                                            <option value="30">Ultimos 30 días</option>
+                                            <option value="90">Ultimos 90 días</option>
+                                            <option value="365">Ultimos 365 días</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                
                </div>
                 <div class="col-lg-6">
-                 <h1 class="text-primary fw-bold">Grafico 2</h1>
-
+                 <div class="row">
+                 <div class="col m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h1 class="text-primary fw-bold">Crecimiento por producto</h1>
+                                   <div class="width: 60%;">
+                                        <select class="form-select custom-select-style">
+                                            <option value="0">Seleccione Periodo</option>
+                                            <option value="7">Ultimos 7 días</option>
+                                            <option value="30">Ultimos 30 días</option>
+                                            <option value="90">Ultimos 90 días</option>
+                                            <option value="365">Ultimos 365 días</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                 </div>
                 </div>
 
 
