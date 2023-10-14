@@ -10,10 +10,10 @@ export class Dashboard extends Component {
     }
 }
 
-Dashboard.template = "TobaccoMetricsPro.Dashboard";
+Dashboard.template = "Dashboard";
 console.log(Dashboard.template);
 
 // Log to console when adding to the registry to confirm it's being executed
 console.log("Adding Dashboard to the registry");
 
-registry.category("actions").add("TobaccoMetricsPro.Dashboard", Dashboard);
+registry.category("actions").add("Dashboard", Dashboard);
