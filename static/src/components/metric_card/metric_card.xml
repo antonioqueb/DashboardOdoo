@@ -12,9 +12,9 @@
                     </span>
                 </div>
                 <div class="h3 mt-5">
-                    <span t-attf-class="text-#{ -10 > 0 ? 'succes':'danger'}">
-                        <span t-attf-class="me-1 fa fa-arrow-#{ -10 > 0 ? 'up':'down'}">
-                            <span><span s-esc="props.porcentage" >
+                    <span t-attf-class="text-#{ props.porcentage > 0 ? 'succes':'danger'}">
+                        <span t-attf-class="me-1 fa fa-arrow-#{ props.porcentage > 0 ? 'up':'down'}">
+                            <span s-esc="props.porcentage" />%
 
                     </span></span>
                         </span>
