@@ -16,10 +16,9 @@ export class MetricCard extends Component {
             num = parseInt(num, 10);
         }
 
-        return num.toLocaleString(); // Utilizar toLocaleString para una formateación más sencilla y confiable
+        // Utiliza la opción de configuración regional 'en-US' para obtener el formato deseado
+        return num.toLocaleString('en-US');
     }
 }
-
-
 
 MetricCard.template = "TobaccoMetricsPro.MetricCard";
