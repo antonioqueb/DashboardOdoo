@@ -11,7 +11,14 @@ export class ChartRenderer extends Component {
             await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js")
         })
 
-        onMounted(()=>this.renderChart())
+        onMounted(() => {
+            try {
+                this.renderChart()
+            } catch (error) {
+                console.error('Error al renderizar el gráfico:', error);
+            }
+        })
+        
     }
 
     renderChart(){
