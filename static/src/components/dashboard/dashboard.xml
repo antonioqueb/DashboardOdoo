@@ -76,6 +76,8 @@
                         </div>
                     </div>
                 </div>
+                    <ChartRenderer type="'Area'" title="'Resumen de resultados'"/>
+
             </div>
         </div>
     </t>
