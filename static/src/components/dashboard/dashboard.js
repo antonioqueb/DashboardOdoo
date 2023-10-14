@@ -11,7 +11,7 @@ export class Dashboard extends Component {
     }
 }
 
-Dashboard.template = "TobaccoMetricsPro.Dashboard";}
+Dashboard.template = "TobaccoMetricsPro.Dashboard";
 Dashboard.components = { MetricCard };
 
 
