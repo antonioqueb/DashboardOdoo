@@ -8,28 +8,31 @@ export class MetricCard extends Component {
     }
 
     formatNumber(num, name) {
-        console.log("Nombre:", name);  // Añade un log para verificar el valor de name
-        console.log("Número:", num);  // Añade un log para verificar el valor de num
-
+        console.log("Nombre:", name);
+        console.log("Número:", num);
+    
         if (!num) {
             return '0';
         }
-
+    
         if (typeof num === 'string') {
-            num = parseInt(num, 10);
+            num = parseFloat(num); // Cambié esto a parseFloat para manejar números decimales
         }
-
-        //  Verifica si el nombre es 'Calidad' para manejarlo como un porcentaje 
-        if (name.trim() === "'Calidad'") {
-            console.log("Es Calidad");
-            return num + '%';
-        } else {
-            console.log("No es Calidad");
+    
+        switch (name.trim()) {
+            case 'Calidad':
+                console.log("Es Calidad");
+                return num.toFixed(2) + '%'; // Agregué toFixed(2) para mostrar dos decimales
+            case 'Costos':
+            case 'Utilidad':
+                console.log(name.trim() + " en dólares");
+                return '$' + num.toFixed(2).toLocaleString('en-US'); // Agregué toFixed(2) para mostrar dos decimales
+            default:
+                console.log("Caso no manejado para", name.trim());
+                return num.toString();
         }
-
-        // Para otros casos, agrega el símbolo del dólar
-        return '$' + num.toLocaleString('en-US');
     }
+    
 }
 
 MetricCard.template = "TobaccoMetricsPro.MetricCard";
