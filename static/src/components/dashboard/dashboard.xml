@@ -56,7 +56,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                                <ChartRenderer/>
+                                <ChartRenderer type="'bar'" title="'Mi Gráfico'"/>
                             </div>
                         </div>
                     </div>
