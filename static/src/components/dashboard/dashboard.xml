@@ -35,10 +35,11 @@
                             porcentage="-10"
                         />
                         <MetricCard 
-                            name="'Calidad'"
-                            value="90"
+                            name="'Utilidad'"
+                            value="43464355"
                             porcentage="10"
                         />
+                       
                         
 
                     </div>
