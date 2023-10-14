@@ -16,6 +16,9 @@ class Header extends Component {
     `;
 }
 
+// Verifica si este log aparece en la consola del navegador
+console.log("Header component loaded");
+
 // Register the component to be used in the template
 odoo.define('TobaccoMetricsPro.header', function (require) {
     return Header;

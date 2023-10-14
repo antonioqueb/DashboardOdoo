@@ -3,8 +3,9 @@
     <!-- Define una acción -->
     <record id="action_open_header" model="ir.actions.client">
         <field name="name">Open Header</field>
-        <field name="tag">TobaccoMetricsPro.header</field> <!-- Cambiado para coincidir con la definición de JS -->
+        <field name="tag">TobaccoMetricsPro.header</field>  <!-- Esto debería coincidir con el nombre definido en odoo.define en tu JS -->
     </record>
+
 
     <menuitem id="menu_hello_world"
               name="Hello World"
