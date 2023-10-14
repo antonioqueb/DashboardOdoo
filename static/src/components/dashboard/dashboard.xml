@@ -52,7 +52,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h2 class="fw-bold" style="font-size:18px">Resumen de resultados</h2> <!-- Corregido el error tipográfico -->
-                                       <div class="px-3 py-1 bg-prinmary cursor-pinter">
+                                       <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                     
@@ -67,7 +67,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h2 class="fw-bold" style="font-size:18px">Crecimiento por producto</h2> <!-- Corregido el error tipográfico -->
-                                        <div class="px-3 py-1 bg-prinmary cursor-pinter">
+                                        <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                     
