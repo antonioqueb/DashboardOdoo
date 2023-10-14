@@ -24,17 +24,17 @@
                     </div>
                     <div class="row">
                         <MetricCard 
-                            name="Ventas"
-                            value="39,936,232"
+                            name="'Ventas'"
+                            value="39936232"
                             porcentage="10"
                         />
                         <MetricCard 
-                            name="Costos"
-                            value="9,032,570"
+                            name="'Costos'"
+                            value="9032570"
                             porcentage="-10"
                         />
                         <MetricCard 
-                            name="Calidad"
+                            name="'Calidad'"
                             value="90"
                             porcentage="10"
                         />
