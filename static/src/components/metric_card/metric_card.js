@@ -19,9 +19,12 @@ export class MetricCard extends Component {
             num = parseInt(num, 10);
         }
 
-        // Verifica si el nombre es "Calidad" para manejarlo como un porcentaje
-        if (name === "'Calidad'") {
+        // Verifica si el nombre es 'Calidad' para manejarlo como un porcentaje
+        if (name.trim() === "'Calidad'") {
+            console.log("Es Calidad");
             return num + '%';
+        } else {
+            console.log("No es Calidad");
         }
 
         // Para otros casos, agrega el símbolo del dólar
