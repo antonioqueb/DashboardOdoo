@@ -16,7 +16,7 @@ export class MetricCard extends Component {
             num = parseInt(num, 10);
         }
 
-        if (name === "'Calidad'") {
+        if (name === "Calidad") {
             return num + '%'; }
 
 
