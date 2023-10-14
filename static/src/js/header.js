@@ -1,7 +1,6 @@
 /** @odoo-module **/
 
 import { Component, tags } from "@odoo/owl";
-import { registry } from "@odoo/owl";
 
 class Header extends Component {
     static template = tags.xml/*xml*/ `
