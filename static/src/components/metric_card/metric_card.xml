@@ -3,20 +3,14 @@
     <t t-name="TobaccoMetricsPro.MetricCard" owl="1">
         <div class="col-lg-6 m-0-p-0">
             <div class="shadow-sm border m-2 p-4 bg-white text-center">
-                <div class="h1 fw-bold text-dark" style="font-size:30px"><span s-esc="props.value" >
-
-                    </span></div>
+                <div class="h1 fw-bold text-dark" style="font-size:30px"><span s-esc="props.value" /></div>
                 <div class="h3 text-muted" style="font-size:22px">
-                    <span s-esc="props.name" >
-
-                    </span>
+                    <span s-esc="props.name" />
                 </div>
                 <div class="h3 mt-5">
                     <span t-attf-class="text-#{ props.porcentage > 0 ? 'succes':'danger'}">
                         <span t-attf-class="me-1 fa fa-arrow-#{ props.porcentage > 0 ? 'up':'down'}">
-                            <span s-esc="props.porcentage" />%
-
-                    </span></span>
+                                <span s-esc="props.porcentage" />%
                         </span>
                     </span>
                     <span> desde el ultimo periodo.</span>
