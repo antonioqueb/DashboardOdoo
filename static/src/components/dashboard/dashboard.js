@@ -16,4 +16,4 @@ console.log(Dashboard.template);
 // Log to console when adding to the registry to confirm it's being executed
 console.log("Adding Dashboard to the registry");
 
-registry.category("main_components").add("Dashboard", Dashboard);
+registry.category("actions").add("Dashboard", Dashboard);
