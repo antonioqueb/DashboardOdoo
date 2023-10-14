@@ -3,8 +3,8 @@
     <t t-name="TobaccoMetricsPro.MetricCard" owl="1">
         <div class="col-lg-6 m-0-p-0">
             <div class="shadow-sm border m-2 p-4 bg-white text-center">
-                <div class="h1 fw-bold text-dark" style="font-size:38px">$39,936,232</div>
-                <p class="h4 text-muted"># 728,973 N° de paquetes</p>
+                <div class="h1 fw-bold text-dark" style="font-size:30px">$39,936,232</div>
+                <p class="h4 text-muted">21.32 M - N° paquetes</p>
                 <div class="h3 text-muted">Ventas</div>
                 <div class="h3 mt-5">
                     <span t-attf-class="text-#{ -10 > 0 ? 'succes':'danger'}">
