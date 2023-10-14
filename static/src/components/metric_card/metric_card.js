@@ -21,7 +21,7 @@ export class MetricCard extends Component {
             case 'Ventas':
             case 'Costos':
             case 'Utilidad':
-                formattedNumber = '$' + num.toFixed(0).toLocaleString('es-MX');
+                formattedNumber = '$' + num.toLocaleString('es-MX');
                 break;
             default:
                 formattedNumber = num.toLocaleString();
