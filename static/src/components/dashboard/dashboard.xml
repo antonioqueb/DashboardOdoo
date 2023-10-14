@@ -10,8 +10,8 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h1 class="text-primary fw-bold">Dirección General</h1>
-                                   <div class="w-50">
-                                        <select class="from-select">
+                                   <div class="width: 60%;">
+                                        <select class="form-select custom-select-style">
                                             <option value="0">Seleccione Periodo</option>
                                             <option value="7">Ultimos 7 días</option>
                                             <option value="30">Ultimos 30 días</option>
