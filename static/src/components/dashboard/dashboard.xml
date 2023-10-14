@@ -74,12 +74,9 @@
                                     <h1 class="text-secundary fw-bold">Crecimiento por producto</h1>
                                    <div class="width: 60%;">
                                         <select class="form-select custom-select-style">
-                                            <option value="0">Seleccione Periodo</option>
-                                            <option value="7">Ultimos 7 días</option>
-                                            <option value="30">Ultimos 30 días</option>
-                                            <option value="90">Ultimos 90 días</option>
-                                            <option value="365">Ultimos 365 días</option>
+                                            <icon>menu</icon>
                                         </select>
+                                    
                                     </div>
                                 </div>
                             </div>
