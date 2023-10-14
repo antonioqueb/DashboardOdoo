@@ -86,7 +86,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                                <ChartRenderer type="'pie'" title="'Ventas por producto'"/>
+                                <ChartRenderer type="'radar'" title="'Ventas por producto'"/>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                                             <span class="fa fa-arrow-right text-white"/>
                                         </div>
                                     </div>
-                                    <ChartRenderer type="'pie'" title="'Ventas por producto'"/>
+                                    <ChartRenderer type="'line'" title="'Ventas por producto'"/>
                                 </div>
                             </div>
                         </div>
