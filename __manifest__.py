@@ -7,8 +7,8 @@
     'website': 'https://www.fingrow.co',
     'depends': ['base', 'web', 'sale','board'],
     'data': [
-        'views/menu.xml'
-        'static/src/components/dashboard/dashboard.xml',
+        'views/menu.xml',
+        'static/src/components/dashboard/dashboard.xml'
     ],
     'assets': {
         'web.assets_backend': [
