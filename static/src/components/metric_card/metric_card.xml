@@ -7,13 +7,13 @@
                 <div class="h3 text-muted" style="font-size:19px">
                     <span t-esc="props.name" />
                 </div>
-                <div class="h3 mt-5">
+                <div class="h3 mt-3">
                     <span t-attf-class="text-#{ props.porcentage > 0 ? 'success':'danger'}">
                         <span t-attf-class="me-1 fa fa-arrow-#{ props.porcentage > 0 ? 'up':'down'}">
                                 <span t-esc="props.porcentage" />%
                         </span>
                     </span>
-                    <span style="font-size:11px"> desde el ultimo periodo.</span>
+                    <span style="font-size:12px"> desde el ultimo periodo.</span>
                 </div>
                 </div>
             </div>
