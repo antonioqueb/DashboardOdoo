@@ -8,8 +8,8 @@
     'depends': ['base', 'web', 'sale','board'],
     'assets': {
     'web.assets_backend': [
-        'TobaccoMetricsPro/static/src/components/dashboard/dashboard.js',
-        'TobaccoMetricsPro/static/src/components/dashboard/dashboard.xml',
+        'TobaccoMetricsPro/static/src/components/**/**.js',
+        'TobaccoMetricsPro/static/src/components/**/**.xml',
     ]
     },
     'data': [
