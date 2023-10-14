@@ -7,7 +7,7 @@
     </record>
 
     <menuitem id="menu_hello_world"
-              name="Hello World"
+              name="Dirección General"
               action="action_open_dasboard"
               sequence="20"/>
 </odoo>
