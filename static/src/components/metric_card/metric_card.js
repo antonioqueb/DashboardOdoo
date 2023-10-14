@@ -27,7 +27,7 @@ export class MetricCard extends Component {
             case 'Costos':
             case 'Utilidad':
                 console.log(name.trim() + " en dólares");
-                return '$' + num.toFixed(2).toLocaleString('en-US'); // Corregido para formatear números con comas
+                return '$' + num.toFixed().toLocaleString('es-MX'); // Corregido para formatear números con comas
             default:
                 console.log("Caso no manejado para", name.trim());
                 return num.toLocaleString(); // Usando toLocaleString para formatear números
