@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <templates xml:space="preserve">
-    <t t-name="dashboard">
+    <t t-name="TobaccoMetricsPro.dashboard">
         <h1>Dashboard Dirección General</h1>
     </t>
 </templates>
