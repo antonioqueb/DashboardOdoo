@@ -14,4 +14,4 @@ Dashboard.template = "TobaccoMetricsPro.dashboard";
 
 // Log to console when adding to the registry to confirm it's being executed
 console.log("Adding Dashboard to the registry");
-registry.category("addons").add("TobaccoMetricsPro.dashboard", Dashboard);
+registry.category("actions").add("TobaccoMetricsPro.Dashboard", Dashboard);
