@@ -15,6 +15,6 @@ class Header extends Component {
 }
 
 // Register the component to be used in the template
-odoo.define('TobaccoMetricsPro.header', function (require) {
+odoo.define('header', function (require) {
     return Header;
 });
