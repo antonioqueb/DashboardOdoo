@@ -6,7 +6,7 @@
                 <div class="h1 fw-bold text-dark" style="font-size:38px">$9,936,232</div>
                 <div class="h3 text-muted">Ventas</div>
                 <div class="h3 mt-5">
-                    <span t-attf-class="text-#{ -14 > 0 ? 'succes':'danger'}">
+                    <span t-attf-class="text-#{ 14 > 0 ? 'succes':'danger'}">
                         <span t-attf-class="me-1 fa fa-arrow-#{ -14 > 0 ? 'up':'down'}">
                             <span> 14%</span>
                         </span>
