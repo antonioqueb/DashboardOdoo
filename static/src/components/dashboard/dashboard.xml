@@ -55,10 +55,12 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h1 class="text-secundary fw-bold">Resumen de Resultados</h1>
-                                   <div class="width: 60%;">
-                                        <select class="form-select custom-select-style">
-                                            <icon>menu</icon>
-                                        </select>
+                                   
+                                <div class="width: 60%;">
+                                    <button class="btn btn-link" type="button">
+                                        <i class="bi bi-list"></i>
+                                    </button>
+                            
                                     </div>
                                 </div>
                             </div>
