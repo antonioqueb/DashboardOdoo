@@ -37,7 +37,7 @@
                         <MetricCard 
                             name="'Utilidad'"
                             value="43464355"
-                            porcentage="16"
+                            porcentage="13"
                         />
                         <MetricCard 
                             name="'Calidad'"
