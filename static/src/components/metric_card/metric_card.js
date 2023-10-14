@@ -8,6 +8,9 @@ export class MetricCard extends Component {
     }
 
     formatNumber(num, name) {
+        console.log("Nombre:", name);  // Añade un log para verificar el valor de name
+        console.log("Número:", num);  // Añade un log para verificar el valor de num
+
         if (!num) {
             return '0';
         }
@@ -18,7 +21,7 @@ export class MetricCard extends Component {
 
         // Verifica si el nombre es "Calidad" para manejarlo como un porcentaje
         if (name === "'Calidad'") {
-            return num + '%';  // Agrega el símbolo de dólar y porcentaje al final del número
+            return num + '%';
         }
 
         // Para otros casos, agrega el símbolo del dólar
