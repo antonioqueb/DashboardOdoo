@@ -3,7 +3,7 @@
     <!-- Define una acción -->
     <record id="action_open_header" model="ir.actions.client">
         <field name="name">Open Header</field>
-        <field name="tag">tobaccometricspro.header</field>
+        <field name="tag">header</field>
     </record>
 
 
@@ -12,5 +12,7 @@
               name="Hello World"
               action="action_open_header"
               sequence="14"
+              parent="base.menu_administration"
+
              />
 </odoo>

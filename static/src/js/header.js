@@ -14,9 +14,7 @@ class Header extends Component {
     `;
 }
 
-console.log("JS file is loaded");  // Agrega esta línea para verificar que el archivo JS se está cargando.
-
 // Register the component to be used in the template
-odoo.define('tobaccometricspro.header', function (require) {
+odoo.define('TobaccoMetricsPro.header', function (require) {
     return Header;
 });
