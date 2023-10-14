@@ -56,7 +56,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                                
+                                <ChartRenderer/>
                             </div>
                         </div>
                     </div>
@@ -71,6 +71,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
