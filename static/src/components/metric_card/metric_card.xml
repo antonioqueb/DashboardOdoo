@@ -2,7 +2,7 @@
 <templates>
     <t t-name="TobaccoMetricsPro.MetricCard" owl="1">
         <div class="col-lg-5 m-0-p-0">
-            <div class="shadow-sm border m-2 p-4 bg-white text-center">
+            <div class="shadow-sm border m-2 p-2 bg-white text-center">
                 <div class="h1 fw-bold text-dark" style="font-size:27px"><span t-esc="props.value" /></div>
                 <div class="h3 text-muted" style="font-size:22px">
                     <span t-esc="props.name" />
