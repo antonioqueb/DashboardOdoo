@@ -25,7 +25,7 @@ export class Dashboard extends Component {
               ];
             
               new Chart(
-                document.getElementById('acquisitions'),
+                this.chartRef.el.getContext('2d'),
                 {
                   type: 'bar',
                   data: {
