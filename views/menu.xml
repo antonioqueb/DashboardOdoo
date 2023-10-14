@@ -6,10 +6,8 @@
         <field name="tag">TobaccoMetricsPro.Dashboard</field>
     </record>
 
-
     <menuitem id="menu_hello_world"
               name="Hello World"
               action="action_open_dasboard"
-              sequence="20"
-             />
+              sequence="20"/>
 </odoo>
