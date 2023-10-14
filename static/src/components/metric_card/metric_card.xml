@@ -21,6 +21,26 @@
                 </div>
                 </div>
             </div>
+
+            <div class="shadow-sm border m-2 p-4 bg-white text-center">
+                <div class="h1 fw-bold text-dark">
+                    $3,936,232
+                    
+                <div class="div h3 text-muted">
+                    Costos
+                </div>
+                <div class="h3 mt-5">
+                    <span t-attf-class="text-#{14 > 0 ? 'succes':'danger'}">
+                        <span t-attf-class="me-1 fa-fa-arrow-#{8 > 0 ? 'up':'down'}">
+                            <span> 8%</span>
+                            <span> desde el ultimo periodo</span>
+
+                        </span>
+                    </span>
+                    
+                </div>
+                </div>
+            </div>
         
         </div>
 
