@@ -8,14 +8,14 @@
     'depends': ['base', 'web', 'sale','board'],
     'data': [
         'views/menu.xml'
+        'static/src/components/dashboard/dashboard.xml',
     ],
     'assets': {
         'web.assets_backend': [
-            'TobaccoMetricsPro/static/src/components/**/*.js',
-            'TobaccoMetricsPro/static/src/components/**/*.xml',
+            'TobaccoMetricsPro/static/src/components/**/*.js'
         ]
     },
-    
+
     'installable': True,
     'application': True,
     'auto_install': False,
