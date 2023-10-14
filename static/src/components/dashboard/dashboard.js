@@ -59,30 +59,33 @@ export class Dashboard extends Component {
                     },
                 ],
             };
-        
-            new Chart(document.getElementById('myChart').getContext('2d'), {
-                type: 'bar',
-                data: data,
-                options: {
-                    title: {
-                        display: true,
-                        text: 'Valores en Mn Mxn (millones)',
-                        fontSize: 16
-                    },
-                    scales: {
-                        x: {
-                            stacked: true,
+            if (this.chartRef.el) {
+                new Chart(this.chartRef.el.getContext('2d'), {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Valores en Mn Mxn (millones)',
+                            fontSize: 16
                         },
-                        y: {
-                            stacked: true,
+                        scales: {
+                            x: {
+                                stacked: true,
+                            },
+                            y: {
+                                stacked: true,
+                            },
                         },
                     },
-                },
-            });
+                });
+
+            }
         }
         );
     }
 }
+
 
 
 Dashboard.template = "TobaccoMetricsPro.Dashboard";
