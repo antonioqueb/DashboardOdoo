@@ -106,7 +106,7 @@ export class Dashboard extends Component {
 }
 
 Dashboard.template = "TobaccoMetricsPro.Dashboard";
-Dashboard.components = { MetricCard };
+Dashboard.components = { MetricCard, ChartRenderer};
 
 
 // Log to console when adding to the registry to confirm it's being executed
