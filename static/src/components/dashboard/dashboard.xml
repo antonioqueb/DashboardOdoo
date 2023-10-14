@@ -10,7 +10,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h1 class="text-primary fw-bold">Dirección General</h1>
-                                   <div>
+                                   <div class="w-50">
                                         <select class="from-select">
                                             <option value="0">Seleccione Periodo</option>
                                             <option value="7">Ultimos 7 días</option>
