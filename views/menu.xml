@@ -11,8 +11,6 @@
     <menuitem id="menu_hello_world"
               name="Hello World"
               action="action_open_header"
-              sequence="14"
-              parent="base.menu_administration"
-
+              sequence="20"
              />
 </odoo>
