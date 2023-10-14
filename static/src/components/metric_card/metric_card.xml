@@ -8,7 +8,7 @@
                     <span s-esc="props.name" />
                 </div>
                 <div class="h3 mt-5">
-                    <span t-attf-class="text-#{ props.porcentage > 0 ? 'succes':'danger'}">
+                    <span t-attf-class="text-#{ props.porcentage > 0 ? 'success':'danger'}">
                         <span t-attf-class="me-1 fa fa-arrow-#{ props.porcentage > 0 ? 'up':'down'}">
                                 <span s-esc="props.porcentage" />%
                         </span>
