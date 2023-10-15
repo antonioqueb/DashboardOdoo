@@ -1,4 +1,4 @@
-/** @odoo-module **/
+/** @odoo-module */
 
 import { registry } from "@web/core/registry"
 import { loadJS } from "@web/core/assets"
