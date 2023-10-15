@@ -47,6 +47,7 @@ export class ChartRenderer extends Component {
                 position: 'bottom',
               }
             }
+            
           },
         }
       );
