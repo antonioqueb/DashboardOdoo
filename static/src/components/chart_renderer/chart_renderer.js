@@ -47,11 +47,11 @@ export class ChartRenderer extends Component {
                 position: 'bottom',
               }
             }
-            
+
           },
         }
       );
     }
 }
 
-ChartRenderer.template = "owl.ChartRenderer"
+ChartRenderer.template = "TobaccoMetricsPro.ChartRenderer"
