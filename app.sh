@@ -4,7 +4,7 @@
 REPO_DIR="$(dirname "$0")"
 
 while true; do
-    # Cambia al directorio del repositorio
+    # Cambia al directorio del repositorio suponiendo que el script está en la raíz del repositorio
     cd "$REPO_DIR"
 
     # Ejecuta git pull

@@ -10,7 +10,7 @@ export class MetricCard extends Component {
     formatNumber(num, name) {
         if (!num) return '0';
 
-        // Convertir la entrada a un número si es una cadena
+        // Convertir la entrada a un número si es una cadena.
         if (typeof num === 'string') num = parseFloat(num);
 
         let formattedNumber;
@@ -28,7 +28,7 @@ export class MetricCard extends Component {
                 break;
         }
 
-        // Logging para depuración - Puedes eliminarlo en producción
+        // Logging para depuración - Puedes eliminarlo en producción.
         console.log('Nombre:', name);
         console.log('Número:', num);
         console.log('Formateado:', formattedNumber);
