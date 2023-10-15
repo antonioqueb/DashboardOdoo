@@ -23,17 +23,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <MetricCard name="'Ventas'" value="120" percentage=6/>
-                        <MetricCard name="'Costos'" value="20" percentage=0/>
-                        <MetricCard name="'Utilidad'" value="'100'" percentage=16/>
-                        <MetricCard name="'Calidad'" value="97" percentage=10/>
+                        <MetricCard name="'Ventas'" value="120" percentage="'6'"/>
+                        <MetricCard name="'Costos'" value="20" percentage="'0'"/>
+                        <MetricCard name="'Utilidad'" value="'100'" percentage="'16'"/>
+                        <MetricCard name="'Calidad'" value="97" percentage="'10'"/>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Top Products</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
+                                    <div class="px-3 py-1 bg-success cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Top Sales People</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
+                                    <div class="px-3 py-1 bg-success cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Monthly Sales</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
+                                    <div class="px-3 py-1 bg-success cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Partner Orders</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
+                                    <div class="px-3 py-1 bg-success cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
