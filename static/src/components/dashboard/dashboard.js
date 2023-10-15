@@ -8,7 +8,7 @@ import { ChartRenderer } from "./chart_renderer/chart_renderer"
 import { useService } from "@web/core/utils/hooks"
 const { Component, onWillStart, useRef, onMounted, useState } = owl
 
-export class OwlSalesDashboard extends Component {
+export class Dashboard extends Component {
     setup(){
         this.state = useState({
             quotations: {
@@ -157,4 +157,4 @@ export class OwlSalesDashboard extends Component {
 TobaccoMetricsPro.template = "TobaccoMetricsPro.Dashboard"
 TobaccoMetricsPro.components = { MetricCard, ChartRenderer }
 
-registry.category("actions").add("owl.sales_dashboard", OwlSalesDashboard)
+registry.category("actions").add("TobaccoMetricsPro.Dashboard", TobaccoMetricsPro)
