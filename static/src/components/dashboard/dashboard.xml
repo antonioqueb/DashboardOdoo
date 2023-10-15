@@ -8,7 +8,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="text-primary fw-bold">Custom Sales Dashboard</h1>
+                                    <h1 class="text-primary fw-bold">Dashboard</h1>
                                     <div>
                                         <select class="form-select">
                                             <option value="0">Select Period</option>
