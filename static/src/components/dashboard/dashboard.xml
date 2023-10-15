@@ -3,20 +3,19 @@
     <t t-name="TobaccoMetricsPro.Dashboard" owl="1">
         <div class="vh-100 overflow-auto bg-muted">
             <div class="row m-3">
-                <div class="col-lg-12">
+                <div class="col-lg-7">
                     <div class="row">
-
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="text-primary fw-bold">Dirección General</h1>
-                                    <div style="width:15%;"> <!-- Corrección de error tipográfico en la declaración de estilo -->
-                                        <select class="form-select custom-select-style">
-                                            <option value="0">Seleccione Periodo</option>
-                                            <option value="7">Ultimos 7 días</option>
-                                            <option value="30">Ultimos 30 días</option>
-                                            <option value="90">Ultimos 90 días</option>
-                                            <option value="365">Ultimos 365 días</option>
+                                    <h1 class="text-primary fw-bold">Custom Sales Dashboard</h1>
+                                    <div>
+                                        <select class="form-select">
+                                            <option value="0">Select Period</option>
+                                            <option value="7">Last 7 Days</option>
+                                            <option value="30">Last 30 Days</option>
+                                            <option value="90">Last 90 Days</option>
+                                            <option value="365">Last 365 Days</option>
                                         </select>
                                     </div>
                                 </div>
@@ -24,59 +23,64 @@
                         </div>
                     </div>
                     <div class="row">
-                        <MetricCard 
-                            name="'Ventas'"
-                            value="39674578"
-                            porcentage="16"
-                        />
-                        <MetricCard 
-                            name="'Costos'"
-                            value="9088083"
-                            porcentage="-4"
-                        />
-                        <MetricCard 
-                            name="'Utilidad'"
-                            value="43464355"
-                            porcentage="13"
-                        />
-                        <MetricCard 
-                            name="'Calidad'"
-                            value="98"
-                            porcentage="3"
-                        />
+                        <KpiCard name="'Quotations'" value="10" percentage="6"/>
+                        <KpiCard name="'Orders'" value="20" percentage="20"/>
+                        <KpiCard name="'Revenues'" value="'30.50K'" percentage="-3"/>
+                        <KpiCard name="'Average Order'" value="'2.5K'" percentage="-10"/>
                     </div>
-                </div>
-                <div class="col-lg-6 ">
                     <div class="row">
-                        <div class="col m-0 p-0">
+                        <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h2 class="fw-bold" style="font-size:18px">Resumen de resultados</h2> <!-- Corregido el error tipográfico -->
-                                       <div class="px-3 py-1 bg-primary cursor-pointer">
+                                    <h3 class="text-primary fw-bold">Top Products</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
-                                       </div>
+                                    </div>
                                 </div>
-                                <ChartRenderer/>
+                                <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="text-primary fw-bold">Top Sales People</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 ">
+                <div class="col-lg-5">
                     <div class="row">
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h2 class="fw-bold" style="font-size:18px">Crecimiento por producto</h2> <!-- Corregido el error tipográfico -->
-                                        <div class="px-3 py-1 bg-primary cursor-pointer">
+                                    <h3 class="text-primary fw-bold">Monthly Sales</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
-                                       </div>
+                                    </div>
                                 </div>
-                             <ChartRenderer/>
+                                <ChartRenderer type="'bar'" title="'Monthly Sales Report'"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="text-primary fw-bold">Partner Orders</h3>
+                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </t>

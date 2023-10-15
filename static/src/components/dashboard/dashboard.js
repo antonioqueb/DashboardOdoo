@@ -3,7 +3,6 @@
 import { registry } from "@web/core/registry";
 import { MetricCard } from "../metric_card/metric_card.js";
 import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
-import { loadJS } from "@web/core/assets";
 
 const { Component, tags, onWillStart, useRef, onMounted } = owl;
 
