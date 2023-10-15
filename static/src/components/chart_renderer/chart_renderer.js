@@ -17,32 +17,17 @@ export class ChartRenderer extends Component {
         });
 
         onMounted(() => {
-            if (this.chartRef.el && this.props.data) {
-                new Chart(this.chartRef.el.getContext('2d'), {
-                    type: this.props.type, // Aceptar el tipo de gráfico como una propiedad
-                    data: this.props.data,
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: this.props.title, // Aceptar el título como una propiedad
-                                fontSize: 16
-                            },
-                        },
-                        scales: {
-                            x: {
-                                stacked: true,
-                            },
-                            y: {
-                                stacked: true,
-                                beginAtZero: true,
-                            },
-                        },
-                    },
-                });
+            if (typeof Chart === "undefined") {
+                console.error('Chart.js no se cargó correctamente.');
+                return;
             }
-        });  
+            
+            try {
+                this.renderChart();
+            } catch (error) {
+                console.error('Error al renderizar el gráfico:', error);
+            }
+        });   
     }
 
     renderChart(){
