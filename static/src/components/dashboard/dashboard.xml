@@ -33,7 +33,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Top Products</h3>
-                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                    <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Top Sales People</h3>
-                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                    <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Monthly Sales</h3>
-                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                    <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Partner Orders</h3>
-                                    <div class="px-3 py-1 bg-primary cursor-pointer">
+                                    <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
