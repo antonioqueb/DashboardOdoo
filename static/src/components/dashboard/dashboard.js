@@ -1,18 +1,22 @@
 /** @odoo-module */
 
-import { registry } from "@web/core/registry"
-import { MetricCard } from "./metric_card/metric_card"
-import { ChartRenderer } from "./chart_renderer/chart_renderer"
-import { loadJS } from "@web/core/assets"
-const { Component, onWillStart, useRef, onMounted } = owl
+import { registry } from "@web/core/registry";
+import { MetricCard } from "../metric_card/metric_card.js";
+import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
+
+const { Component, tags, onWillStart, useRef, onMounted } = owl;
 
 export class Dashboard extends Component {
-    setup(){
-
+    setup () {
     }
+    
 }
 
-Dashboard.template = "TobaccoMetricsPro.Dashboard"
-Dashboard.components = { MetricCard, ChartRenderer }
+Dashboard.template = "TobaccoMetricsPro.Dashboard";
+Dashboard.components = { MetricCard, ChartRenderer};
 
-registry.category("actions").add("TobaccoMetricsPro.dashboard", Dashboard)
+
+// Log to console when adding to the registry to confirm it's being executed   
+console.log("Adding Dashboard to the registry");
+
+registry.category("actions").add("TobaccoMetricsPro.Dashboard", Dashboard);
