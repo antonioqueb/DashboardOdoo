@@ -63,7 +63,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'bar'" title="'Monthly Sales Report'"/>
+                                <ChartRenderer type="'line'" title="'Monthly Sales Report'"/>
                             </div>
                         </div>
                     </div>
