@@ -56,7 +56,8 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                                <ChartRenderer type="'bar'" title="'Resumen de resultados'"/>
+                                <ChartRenderer type="'bar'" title="'Resumen de resultados'" t-att-data="myData"/>
+
                             </div>
                         </div>
                     </div>
@@ -71,7 +72,8 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                        </div>
                                 </div>
-                             <ChartRenderer type="'line'" title="'Crecimiento por producto'"/>
+                            <ChartRenderer type="'bar'" title="'Resumen de resultados'" t-att-data="myDataProductos"/>
+
                             </div>
                         </div>
                     </div>
