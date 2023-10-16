@@ -27,7 +27,10 @@ export class Dashboard extends Component {
 
   }
 
-  
+  getDates(){
+    this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
+    this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
+  }
 
   async getQuotations(){
     let domain = [['state', 'in', ['sent', 'draft']]]
@@ -51,6 +54,7 @@ export class Dashboard extends Component {
     
 
 }
+
 
 
 async getOrders(){
@@ -158,10 +162,7 @@ async viewSales(){
 
 
 
-getDates(){
-  this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
-  this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
-}
+
 
 
 viewOrders(){
