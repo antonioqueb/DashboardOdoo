@@ -23,10 +23,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <MetricCard name="'Ventas'" value="120" percentage="6"/>
-                        <MetricCard name="'Costos'" value="20" percentage="-20"/>
-                        <MetricCard name="'Utilidad'" value="'100'" percentage="16"/>
-                        <MetricCard name="'Calidad'" value="97" percentage="10"/>
+                        <MetricCard name="'Ventas'" value="state.ventas.value" percentage="state.ventas.porcentage"/>
+                        <MetricCard name="'Costos'" value="state.ventas.value" percentage="state.ventas.porcentage"/>
+                        <MetricCard name="'Utilidad'" value="state.ventas.value" percentage="state.ventas.porcentage"/>
+                        <MetricCard name="'Calidad'" value="state.ventas.value" percentage="state.ventas.porcentage"/>
                     </div>
                     <!-- Grafico-->
                     <div class="row">
