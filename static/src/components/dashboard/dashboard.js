@@ -155,7 +155,7 @@ async viewSales(){
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
-      name: "Sales",
+      name: "Quotations",
       res_model: "sale.order",
       domain,
       views: [
