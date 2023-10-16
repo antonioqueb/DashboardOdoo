@@ -145,8 +145,8 @@ async viewSales(){
 
   // Actualizar el estado con el monto total y el porcentaje
   this.state.sales = {
-      total: totalAmount.toFixed(2), // Formatea a dos decimales
-      percentage: percentage.toFixed(2),  // Formatea a dos decimales
+      total: totalAmount.toFixed(), // Formatea a dos decimales
+      percentage: percentage.toFixed(),  // Formatea a dos decimales
   };
 
   let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); 
