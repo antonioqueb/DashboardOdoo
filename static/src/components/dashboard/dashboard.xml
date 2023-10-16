@@ -24,11 +24,12 @@
                     </div>
                     <div class="row">
                         <MetricCard 
-                            onClick.bind="viewSales" 
-                            name="'Sales'" 
-                            value="state.orders ? `$${(state.orders.revenue/1000).toFixed(2)}K` : 'Loading...'" 
-                            percentage="state.orders ? state.orders.percentage : 'Loading...'" 
-                        />
+                        onClick.bind="viewSales" 
+                        name="'Sales'" 
+                        value="state.totalAmount ? `$${(state.totalAmount/1000).toFixed(2)}K` : 'Loading...'" 
+                        percentage="state.orders ? state.orders.percentage : 'Loading...'" 
+                    />
+
                         <MetricCard onClick.bind="viewOrders" name="'Orders'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewRevenues" name="'Revenues'" value="state.orders ? state.orders.revenue : 'Loading...'" percentage="state.orders ? state.orders.revenue_percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewRevenues" name="'Average Order'" value="state.orders ? state.orders.average : 'Loading...'" percentage="state.orders ? state.orders.average_percentage : 'Loading...'"/>
