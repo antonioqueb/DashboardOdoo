@@ -8,10 +8,16 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 
 export class Dashboard extends Component {
-    setup () {
-      console.log("Dashboard setup");
-      
-    }
+  setup(){
+    this.state = useState({
+        quotations: {
+            value:10,
+            percentage:6,
+        },
+        period:90,
+    })
+    
+}
     
 }
 
