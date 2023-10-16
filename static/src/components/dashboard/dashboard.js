@@ -21,7 +21,7 @@ export class Dashboard extends Component {
             },
             period: 90,
         });
-        console.log('Initial state set:', this.state);  // Verificar el estado inicial
+      //  console.log('Initial state set:', this.state);  // Verificar el estado inicial
 
         // Conectar con el servicio ORM de Odoo
         // this.orm = useService("orm");
