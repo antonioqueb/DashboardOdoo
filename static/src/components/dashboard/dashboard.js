@@ -26,6 +26,9 @@ export class Dashboard extends Component {
     this.getDates()
     await this.getQuotations()
     await this.getOrders()
+    console.log(this.state)
+    console.log(this.state.orders)
+    
   }
     
 }
