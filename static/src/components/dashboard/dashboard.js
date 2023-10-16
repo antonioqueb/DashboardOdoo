@@ -18,7 +18,8 @@ export class Dashboard extends Component {
     })
     this.orm = useService("orm")
     console.log(this.orm)
-    
+    this.actionService = useService("action")
+    console.log(this.actionService)
 }
     
 }
