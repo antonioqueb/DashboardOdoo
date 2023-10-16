@@ -1,25 +1,59 @@
 /** @odoo-module */
 
+
+
+/** @odoo-module */
+
 import { registry } from "@web/core/registry";
 import { MetricCard } from "../metric_card/metric_card.js";
 import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
-//import { useService } from "@web/core/utils/hooks.js";
 
-const { Component, tags, onWillStart, useRef, onMounted, useState} = owl;
+const { Component, tags, onWillStart, useRef, onMounted } = owl;
 
 export class Dashboard extends Component {
+    setup () {
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import { registry } from "@web/core/registry";
+//import { MetricCard } from "../metric_card/metric_card.js";
+//import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
+//import { useService } from "@web/core/utils/hooks.js";
+
+//const { Component, tags, onWillStart, useRef, onMounted, useState} = owl;
+
+//export class Dashboard extends Component {
 
     // Este método se ejecutará durante la fase de configuración del componente.
-    setup() {
+    //setup() {
        // console.log('Setup method started');  // Verificar que el método setup se inicia
 
         // Establecer el estado inicial
-        this.state = useState({
-            ventas: {
-                value: 2421,
-                porcentage: 12.2
-            }
-        });
+       // this.state = useState({
+         //   ventas: {
+          //      value: 2421,
+            //    porcentage: 12.2
+         //   }
+       // });
       //  console.log('Initial state set:', this.state);  // Verificar el estado inicial
 
         // Conectar con el servicio ORM de Odoo
@@ -31,7 +65,7 @@ export class Dashboard extends Component {
       //      console.log('onWillStart triggered');  //   Verificar que onWillStart se dispara
       //      await this.getQuotations();
        // });
-    }
+   // }
 
     // Método para manejar el evento de clic del botón periodo
    // onChangePeriod() {
@@ -54,16 +88,13 @@ export class Dashboard extends Component {
         //    console.error('Error occurred during data retrieval:', error);  // Capturar y mostrar cualquier error que ocurra durante la recuperación de datos
      //   }
    // }
-}
+//}
 
-
-Dashboard.template = "TobaccoMetricsPro.dashboard";
+Dashboard.template = "TobaccoMetricsPro.Dashboard";
 Dashboard.components = { MetricCard, ChartRenderer};
 
 
+// Log to console when adding to the registry to confirm it's being executed   
+console.log("Adding Dashboard to the registry");
 
-// El código es una adición al registro de acciones de Odoo 
-// que agrega el componente Dashboard al registro de acciones con la clave 
-// "TobaccoMetricsPro.Dashboard".
-
-registry.category("actions").add("TobaccoMetricsPro.dashboard", Dashboard);
+registry.category("actions").add("TobaccoMetricsPro.Dashboard", Dashboard);
