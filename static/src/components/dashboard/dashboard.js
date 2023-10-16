@@ -9,6 +9,9 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 export class Dashboard extends Component {
   setup(){
+    self = self.with_context(force_company=None)
+
+
     this.state = useState({
         quotations: {},
         period: 90,
