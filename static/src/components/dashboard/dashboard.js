@@ -100,7 +100,7 @@ async getOrders(){
 }
 
 async getSales(){
-  let domain = [['state', 'in', ['sale']]]
+  let domain = [['state', 'in', ['sale', 'done']]]
   if (this.state.period > 0){
       domain.push(['date_order','>', this.state.current_date])
   }
@@ -108,7 +108,7 @@ async getSales(){
   //this.state.quotations.value = data
 
   // previous period
-  let prev_domain = [['state', 'in', ['sale']]]
+  let prev_domain = [['state', 'in', ['sale', 'done']]]
   if (this.state.period > 0){
       prev_domain.push(['date_order','>', this.state.previous_date], ['date_order','<=', this.state.current_date])
   }
@@ -165,7 +165,7 @@ async viewQuotations(){
 // Card Sales
 
 viewSales(){
-  let domain = [['state', 'in', ['sale']]]
+  let domain = [['state', 'in', ['sale', 'done']]]
   if (this.state.period > 0){
       domain.push(['date_order','>', this.state.current_date])
   }
