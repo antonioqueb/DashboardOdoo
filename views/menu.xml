@@ -20,6 +20,6 @@
               name="Dashboard"
               action="action_open_dasboard_g"
               sequence="20"
-              pa
+              parent="menu_dashboard"
               />
 </odoo>
