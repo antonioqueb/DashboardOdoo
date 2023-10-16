@@ -50,6 +50,8 @@ export class Dashboard extends Component {
     console.log(this.state.quotations)
     console.log(this.state.period)
 
+    
+
 }
 
 
@@ -114,13 +116,18 @@ async viewQuotations(){
   })
 }
 
-getDates() {
-  const currentDate = new Date();
-  const previousDate = new Date();
-  previousDate.setDate(currentDate.getDate() - this.state.period);
+//getDates() {
+  //const currentDate = new Date();
+  //const previousDate = new Date();
+  //previousDate.setDate(currentDate.getDate() - this.state.period);
   
-  this.state.current_date = currentDate;
-  this.state.previous_date = previousDate;
+  //this.state.current_date = currentDate;
+  //this.state.previous_date = previousDate;
+//}
+
+getDates(){
+  this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
+  this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
 }
 
 
