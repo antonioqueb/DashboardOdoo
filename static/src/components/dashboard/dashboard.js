@@ -26,22 +26,11 @@ export class Dashboard extends Component {
     this.getDates()
     await this.getQuotations()
     await this.getOrders()
-    console.log(this.state)
-    console.log(this.state.orders)
 
-
-    
   }
     
 }
 
-// Loggin para debuggear
-console.log("Dashboard component loaded");
-console.log(Dashboard)
-console.log(Dashboard.template)
-console.log(Dashboard.components)
-console.log(Dashboard.components.MetricCard)
-console.log(Dashboard.components.ChartRenderer)
 
 
 // Set the template and components for the Dashboard component
