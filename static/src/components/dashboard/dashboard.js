@@ -127,18 +127,29 @@ async viewSales(){
   }
 
   // Obtener las órdenes de venta
-  const sales = await this.orm.searchRead("sale.order", domain, ['amount_total']); // Asegúrate de adaptar este código según tus necesidades
+  const sales = await this.orm.searchRead("sale.order", domain, ['amount_total']); 
 
-  // Calcular el monto total de pagos registrados
+  // Calcular el monto total de las ventas
+  let totalAmount = 0;
+  sales.forEach(sale => {
+      totalAmount += sale.amount_total;
+  });
+
+  // TODO: Necesitarás calcular los valores 'data' y 'prev_data' correctamente.
+  // Los he seteado a 0 por ahora como placeholders.
+  const data = totalAmount;  // Esto debería ser tu valor 'data'
+  const prev_data = 0;  // Esto debería ser tu valor 'prev_data'
+
+  // Calcular el porcentaje de cambio
   const percentage = prev_data !== 0 ? ((data - prev_data) / prev_data) * 100 : 0;
 
-  // Actualizar el estado con el monto total
+  // Actualizar el estado con el monto total y el porcentaje
   this.state.sales = {
-      total: totalAmount.toFixed(), // Formatear a dos decimales, adaptar según sea necesario
-      // Actualiza otras propiedades según sea necesario
+      total: totalAmount.toFixed(2), // Formatea a dos decimales
+      percentage: percentage.toFixed(2),  // Formatea a dos decimales
   };
 
-  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); // Asegúrate de reemplazar 'view_sale_order_tree' con el nombre actual de la vista de lista que deseas usar
+  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); 
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
@@ -153,11 +164,10 @@ async viewSales(){
   this.render();
 
   console.log(this.state)
-
   console.log(this.state.sales)
   console.log(this.state.period)
-  
 }
+
 
 
 
