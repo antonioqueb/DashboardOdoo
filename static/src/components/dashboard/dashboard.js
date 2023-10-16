@@ -98,6 +98,18 @@ async getOrders(){
 }
     
 
+async salesIncome(){
+  let domain = [['state', 'in', ['sale', 'done']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
+  }
+
+  const data = await this.orm.readGroup("sale.order", domain, ["amount_total:sum"], [])
+
+
+
+}
+
 
 async viewQuotations(){
   let domain = [['state', 'in', ['sent', 'draft']]]
