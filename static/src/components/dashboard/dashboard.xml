@@ -26,14 +26,14 @@
                         <MetricCard onClick.bind="viewOrders" name="'Ventas'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewOrders" name="'Costos'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewOrders" name="'Utilidad'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                        <MetricCard onClick.bind="viewOrders" name="'Ventas'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                        <MetricCard onClick.bind="viewOrders" name="'Calidad'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
 
                     </div>
                     <div class="row">
                         <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Top Products</h3>
+                                    <h3 class="text-primary fw-bold">Resumen de Resultados</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
