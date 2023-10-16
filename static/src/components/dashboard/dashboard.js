@@ -17,7 +17,7 @@ export class Dashboard extends Component {
         this.state = useState({
             ventas: {
                 value: 2421,
-                porcentage: 12.2,
+                porcentage: 12.2
             }
         });
       //  console.log('Initial state set:', this.state);  // Verificar el estado inicial
