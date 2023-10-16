@@ -29,6 +29,8 @@ export class Dashboard extends Component {
 
   }
 
+  
+
   async getQuotations(){
     let domain = [['state', 'in', ['sent', 'draft']]]
     if (this.state.period > 0){
@@ -111,6 +113,16 @@ async viewQuotations(){
       ]
   })
 }
+
+getDates() {
+  const currentDate = new Date();
+  const previousDate = new Date();
+  previousDate.setDate(currentDate.getDate() - this.state.period);
+  
+  this.state.current_date = currentDate;
+  this.state.previous_date = previousDate;
+}
+
 
 viewOrders(){
   let domain = [['state', 'in', ['sale', 'done']]]
