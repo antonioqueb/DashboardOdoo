@@ -21,6 +21,12 @@ export class Dashboard extends Component {
     this.actionService = useService("action")
     console.log(this.actionService)
 }
+
+  async onChangePeriod(){
+    this.getDates()
+    await this.getQuotations()
+    await this.getOrders()
+  }
     
 }
 
