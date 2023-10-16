@@ -24,8 +24,7 @@
                     </div>
                     <div class="row">
                         <MetricCard onClick.bind="viewOrders" name="'Costos'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                        <MetricCard onClick.bind="viewRevenues" name="'Revenues'" value="state.orders ? state.orders.revenue : 'Loading...'" percentage="state.orders ? state.orders.revenue_percentage : 'Loading...'"/>
-                        <MetricCard onClick.bind="viewRevenues" name="'Average Order'" value="state.orders ? state.orders.average : 'Loading...'" percentage="state.orders ? state.orders.average_percentage : 'Loading...'"/>
+                        <MetricCard onClick.bind="viewRevenues" name="'Presupuesto'" value="state.orders ? state.orders.revenue : 'Loading...'" percentage="state.orders ? state.orders.revenue_percentage : 'Loading...'"/>
 
                     </div>
                     <div class="row">
