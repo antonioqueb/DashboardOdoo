@@ -29,7 +29,7 @@ export class Dashboard extends Component {
 
         // Obtener los datos de ventas durante la fase de inicio
         onWillStart(async () => {
-            console.log('onWillStart triggered');  // Verificar que onWillStart se dispara
+            console.log('onWillStart triggered');  //   Verificar que onWillStart se dispara
             await this.getQuotations();
         });
     }
