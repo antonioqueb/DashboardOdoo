@@ -90,6 +90,66 @@ async getOrders(){
   //this.env.services.company
 }
     
+
+
+async viewQuotations(){
+  let domain = [['state', 'in', ['sent', 'draft']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
+  }
+
+  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_quotation_tree_with_onboarding']], ['res_id'])
+
+  this.actionService.doAction({
+      type: "ir.actions.act_window",
+      name: "Quotations",
+      res_model: "sale.order",
+      domain,
+      views: [
+          [list_view.length > 0 ? list_view[0].res_id : false, "list"],
+          [false, "form"],
+      ]
+  })
+}
+
+viewOrders(){
+  let domain = [['state', 'in', ['sale', 'done']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
+  }
+
+  this.actionService.doAction({
+      type: "ir.actions.act_window",
+      name: "Quotations",
+      res_model: "sale.order",
+      domain,
+      context: {group_by: ['date_order']},
+      views: [
+          [false, "list"],
+          [false, "form"],
+      ]
+  })
+}
+
+viewRevenues(){
+  let domain = [['state', 'in', ['sale', 'done']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
+  }
+
+  this.actionService.doAction({
+      type: "ir.actions.act_window",
+      name: "Quotations",
+      res_model: "sale.order",
+      domain,
+      context: {group_by: ['date_order']},
+      views: [
+          [false, "pivot"],
+          [false, "form"],
+      ]
+  })
+}
+
 }
 
 
