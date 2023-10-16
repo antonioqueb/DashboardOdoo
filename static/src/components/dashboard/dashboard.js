@@ -147,8 +147,8 @@ async viewSales(){
 
   // Actualizar el estado con el monto total y el porcentaje
   this.state.sales = {
-      total: totalAmount.toFixed(2), 
-      percentage: percentage.toFixed(2)
+      total: totalAmount,
+      percentage: percentage
   };
 
   let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); 
