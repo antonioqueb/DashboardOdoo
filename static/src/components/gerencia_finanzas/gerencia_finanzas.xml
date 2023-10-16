@@ -43,7 +43,7 @@
                         <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Top Sales People</h3>
+                                    <h3 class="text-primary fw-bold">Cumplimiento del presupuesto</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
@@ -58,7 +58,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Monthly Sales</h3>
+                                    <h3 class="text-primary fw-bold">Eficiencia en la utilización de recursos</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
