@@ -16,6 +16,7 @@ export class Dashboard extends Component {
         },
         period:90,
     })
+    this.orm = useService("orm")
     
 }
     
