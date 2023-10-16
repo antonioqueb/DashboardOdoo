@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!--   Define una acción a ejecutar  ..  . -->
-    <record id="action_open_dasboard" model="ir.actions.client">
+    <record id="action_open_dasboard_dg" model="ir.actions.client">
         <field name="name">Dashboard Dirección General</field>
         <field name="tag">TobaccoMetricsPro.Dashboard</field>
     </record>
 
-    <record id="action_open_dasboard" model="ir.actions.client">
+    <record id="action_open_dasboard_g" model="ir.actions.client">
         <field name="name">Dashboard Dirección General</field>
         <field name="tag">TobaccoMetricsPro.Dashboard</field>
     </record>
 
     <menuitem id="menu_dashboard"
               name="Dashboard"
-              action="action_open_dasboard"
+              action="action_open_dasboard_dg"
               sequence="20"/>
 </odoo>
