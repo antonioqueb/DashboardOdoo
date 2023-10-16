@@ -11,7 +11,7 @@ while true; do
     HORA=$(date '+%H:%M:%S')
 
     # Construir el mensaje de commit
-    MSG_COMMIT="Desarrollo de la semana #$SEMANA de producción de TobaccoMetricsPro - $MES $AÑO $HORA"
+    MSG_COMMIT="Desarrollo de la semana #$SEMANA de producción de TobaccoMetricsPro -  $HORA"
 
     # Realizar el commit
     git commit -m "$MSG_COMMIT"
