@@ -139,6 +139,7 @@ async viewSales(){
   })
   console.log(this.state.period)
   console.log(this.state)
+  console.log("codigfo nuevo")
 }
 
 
