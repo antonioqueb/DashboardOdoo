@@ -130,7 +130,7 @@ async viewSales(){
 
   // Actualizar el estado con el monto total
   this.state.sales = {
-      total: totalAmount.toFixed(2), // Formatear a dos decimales, adaptar según sea necesario
+      total: totalAmount.toFixed(), // Formatear a dos decimales, adaptar según sea necesario
       // Actualiza otras propiedades según sea necesario
   };
 
