@@ -96,7 +96,7 @@ async getOrders(){
       average_percentage: average_percentage.toFixed(2),
   }
 
-  //this.env.services.company
+  //this.env.services.company ok?
 }
 
 async getSales(){
