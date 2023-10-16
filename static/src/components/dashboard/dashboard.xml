@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <MetricCard onClick.bind="viewSales" name="'Sales'" value="state.sales ? state.sales.total : 'Loading...'" percentage="state.sales ? state.sales.percentage : 'Loading...'"/>
+                        <MetricCard onClick.bind="viewSales" name="'Sales'" value="state.orders ? state.orders.total : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewOrders" name="'Orders'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewRevenues" name="'Revenues'" value="state.orders ? state.orders.revenue : 'Loading...'" percentage="state.orders ? state.orders.revenue_percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewRevenues" name="'Average Order'" value="state.orders ? state.orders.average : 'Loading...'" percentage="state.orders ? state.orders.average_percentage : 'Loading...'"/>
