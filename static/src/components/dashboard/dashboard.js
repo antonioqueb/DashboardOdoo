@@ -134,7 +134,9 @@ async viewSales() {
       []
   );
 
-  console.log('Total Amount:', totalAmount[0].amount_total);  // Añadir una manera adecuada para mostrar el totalAmount en tu aplicación
+  console.log('Total Amount:', totalAmount[0].amount_total);  
+
+  this.state.totalAmount = totalAmount[0].amount_total; // Asegúrate de que esto está dentro del método
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
@@ -148,6 +150,9 @@ async viewSales() {
       ]
   });
 }
+
+
+
 
 
 
