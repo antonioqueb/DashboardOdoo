@@ -8,7 +8,7 @@
 
     <record id="action_open_dasboard_g" model="ir.actions.client">
         <field name="name">Gerencia de Planeación</field>
-        <field name="tag">TobaccoMetricsPro.Gerencia</field>
+        <field name="tag">TobaccoMetricsPro.GerenciaPlaneacion</field>
     </record>
 
     <record id="action_open_dasboard_gf" model="ir.actions.client">
