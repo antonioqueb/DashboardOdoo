@@ -142,7 +142,7 @@ async viewSales(){
   if(prev_data !== 0) {
     percentage = ((data - prev_data) / prev_data) * 100;
   } else {
-    percentage = 0;  // Establece un valor predeterminado para evitar la división por cero
+    percentage = 1;  // Establece un valor predeterminado para evitar la división por cero
   }
 
   // Actualizar el estado con el monto total y el porcentaje
