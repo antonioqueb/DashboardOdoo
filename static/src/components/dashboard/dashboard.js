@@ -114,6 +114,27 @@ async viewQuotations(){
   })
 }
 
+async viewSales(){
+  let domain = [['state', 'in', ['sale']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
+  }
+
+  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id'])  // Asegúrate de reemplazar 'view_sale_order_tree' con el nombre actual de la vista de lista que deseas usar
+
+  this.actionService.doAction({
+      type: "ir.actions.act_window",
+      name: "Sales",
+      res_model: "sale.order",
+      domain,
+      views: [
+          [list_view.length > 0 ? list_view[0].res_id : false, "list"],
+          [false, "form"],
+      ]
+  })
+}
+
+
 //getDates() {
   //const currentDate = new Date();
   //const previousDate = new Date();
