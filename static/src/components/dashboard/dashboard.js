@@ -9,6 +9,8 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 export class Dashboard extends Component {
     setup () {
+      console.log("Dashboard setup");
+      
     }
     
 }
