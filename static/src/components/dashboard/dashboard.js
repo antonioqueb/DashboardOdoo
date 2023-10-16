@@ -9,10 +9,11 @@ const { Component, tags, onWillStart, useRef, onMounted, useState} = owl;
 
 export class Dashboard extends Component {
 
-// Este código establece el estado inicial de un componente con algunos 
-// datos de ventas utilizando el gancho useState.
-// code:
-    setup () {
+    // Este método se ejecutará durante la fase de configuración del componente.
+    setup() {
+        console.log('Setup method started');  // Verificar que el método setup se inicia
+
+        // Establecer el estado inicial
         this.state = useState({
             ventas: {
                 value: 2421,
@@ -20,35 +21,42 @@ export class Dashboard extends Component {
             },
             period: 90,
         });
+        console.log('Initial state set:', this.state);  // Verificar el estado inicial
 
-        // Method to connect whit the service ORM of Odoo
+        // Conectar con el servicio ORM de Odoo
         this.orm = useService("orm");
+        console.log('ORM service connected:', this.orm);  // Verificar la conexión con el servicio ORM
 
-
-        // Method to get the data of sales
+        // Obtener los datos de ventas durante la fase de inicio
         onWillStart(async () => {
+            console.log('onWillStart triggered');  // Verificar que onWillStart se dispara
             await this.getQuotations();
         });
-
     }
 
-    // Metodo manejar el evento click del boton periodo
-        onChangePeriod () {
-            console.log(this.state.period);
-        
+    // Método para manejar el evento de clic del botón periodo
+    onChangePeriod() {
+        console.log('onChangePeriod triggered with period:', this.state.period);  // Verificar que se dispara el evento y mostrar el periodo
+    }
+
+    // Método para obtener los datos de ventas
+    async getQuotations() {
+        console.log('getQuotations method started');  // Verificar que el método getQuotations se inicia
+
+        try {
+            const data = await this.orm.searchCount("sale.order", [
+                ["state", "in", ["sale", "done"]]
+            ]);
+            console.log('Data retrieved from ORM:', data);  // Mostrar los datos recuperados del ORM
+
+            this.state.ventas.value = data;
+            console.log('Sales data set to state:', this.state.ventas.value);  // Verificar que los datos de ventas se establecen en el estado
+        } catch (error) {
+            console.error('Error occurred during data retrieval:', error);  // Capturar y mostrar cualquier error que ocurra durante la recuperación de datos
         }
-   
-    // Metodo para obtener los datos de ventas
-    async getQuotations () {
-        const data = await this.orm.searchCount("sale.order", [
-            ["state", "in", ["sale", "done"]]
-        ]);
-        console.log('Data from getQuotations:', data);  // Agregar esta línea para depurar
-        this.state.ventas.value = data;
     }
-    
-
 }
+
 
 Dashboard.template = "TobaccoMetricsPro.Dashboard";
 Dashboard.components = { MetricCard, ChartRenderer};
