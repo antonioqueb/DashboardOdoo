@@ -3,7 +3,7 @@
 import { registry } from "@web/core/registry";
 import { MetricCard } from "../metric_card/metric_card.js";
 import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
-import { useService } from "@web/core/utils/hooks.js";
+//import { useService } from "@web/core/utils/hooks.js";
 
 const { Component, tags, onWillStart, useRef, onMounted, useState} = owl;
 
@@ -57,7 +57,7 @@ export class Dashboard extends Component {
 }
 
 
-Dashboard.template = "TobaccoMetricsPro.Dashboard";
+Dashboard.template = "TobaccoMetricsPro.dashboard";
 Dashboard.components = { MetricCard, ChartRenderer};
 
 
@@ -66,4 +66,4 @@ Dashboard.components = { MetricCard, ChartRenderer};
 // que agrega el componente Dashboard al registro de acciones con la clave 
 // "TobaccoMetricsPro.Dashboard".
 
-registry.category("actions").add("TobaccoMetricsPro.Dashboard", Dashboard);
+registry.category("actions").add("TobaccoMetricsPro.dashboard", Dashboard);
