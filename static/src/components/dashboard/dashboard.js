@@ -45,6 +45,9 @@ export class Dashboard extends Component {
     const prev_data = await this.orm.searchCount("sale.order", prev_domain)
     const percentage = ((data - prev_data)/prev_data) * 100
     this.state.quotations.percentage = percentage.toFixed(2)
+    console.log(this.state.quotations)
+    console.log(this.state.period)
+    
 }
     
 }
