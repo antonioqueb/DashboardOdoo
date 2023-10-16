@@ -28,10 +28,29 @@ export class Dashboard extends Component {
     await this.getOrders()
     console.log(this.state)
     console.log(this.state.orders)
+
+
     
   }
     
 }
+
+// Loggin para debuggear
+console.log("Dashboard component loaded");
+console.log(Dashboard)
+console.log(Dashboard.template)
+console.log(Dashboard.components)
+console.log(Dashboard.components.MetricCard)
+console.log(Dashboard.components.ChartRenderer)
+console.log(Dashboard.components.MetricCard.template)
+console.log(Dashboard.components.ChartRenderer.template)
+console.log(Dashboard.components.MetricCard.components)
+console.log(Dashboard.components.ChartRenderer.components)
+console.log(Dashboard.components.MetricCard.components.MetricCard)
+console.log(Dashboard.components.ChartRenderer.components.ChartRenderer)
+
+// Set the template and components for the Dashboard component
+
 
 Dashboard.template = "TobaccoMetricsPro.Dashboard";
 Dashboard.components = { MetricCard, ChartRenderer};

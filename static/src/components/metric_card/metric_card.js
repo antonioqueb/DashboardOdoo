@@ -28,10 +28,7 @@ export class MetricCard extends Component {
                 break;
         }
 
-        // Logging para depuración - Puedes eliminarlo en producción.
-        console.log('Nombre:', name);
-        console.log('Número:', num);
-        console.log('Formateado:', formattedNumber);
+      
 
         return formattedNumber;
     }
