@@ -126,7 +126,7 @@ async viewSales(){
   const sales = await this.orm.searchRead("sale.order", domain, ['amount_total']); // Asegúrate de adaptar este código según tus necesidades
 
   // Calcular el monto total de pagos registrados
-  const totalAmount = sales.reduce((total, sale) => total + sale.amount_total, 0);
+  const percentage = prev_data !== 0 ? ((data - prev_data) / prev_data) * 100 : 0;
 
   // Actualizar el estado con el monto total
   this.state.sales = {
@@ -146,6 +146,8 @@ async viewSales(){
           [false, "form"],
       ]
   });
+  this.render();
+
   console.log(this.state)
 
   console.log(this.state.sales)
