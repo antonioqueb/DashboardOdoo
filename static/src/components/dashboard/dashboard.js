@@ -132,6 +132,7 @@ async viewSales() {
       domain,
       ["amount_total:sum"],
       []
+      console.log(totalAmount[0].amount_total)
   );
 
   console.log('Total Amount:', totalAmount[0].amount_total);  
