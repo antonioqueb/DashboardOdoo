@@ -141,12 +141,15 @@ async viewSales(){
   const prev_data = 12;  // Esto debería ser tu valor 'prev_data'  
 
   // Calcular el porcentaje de cambio
-  const percentage = prev_data !== 0 ? ((data - prev_data) / prev_data) * 100 : 0;
+  // const percentage = prev_data !== 0 ? ((data - prev_data) / prev_data) * 100 : 0;
+
+  // Asignar un valor fijo al porcentaje para propósitos de prueba
+  const percentage = 50;  // Valor fijo para propósitos de prueba
 
   // Actualizar el estado con el monto total y el porcentaje
   this.state.sales = {
-      total: totalAmount.toFixed(), // Formatea a dos decimales
-      percentage: percentage.toFixed(),  // Formatea a dos decimales
+      total: totalAmount.toFixed(2), // Formatea a dos decimales
+      percentage: percentage.toFixed(2),  // Formatea a dos decimales
   };
 
   let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); 
@@ -167,9 +170,6 @@ async viewSales(){
   console.log(this.state.sales)
   console.log(this.state.period)
 }
-
-
-
 
 
 
