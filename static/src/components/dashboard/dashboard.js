@@ -121,55 +121,24 @@ async viewQuotations(){
 // Card Sales
 
 async viewSales(){
-  let domain = [['state', 'in', ['sale']]]
+  let domain = [['state', 'in', ['sale', 'done']]]
   if (this.state.period > 0){
       domain.push(['date_order','>', this.state.current_date])
   }
-
-  // Obtener las órdenes de venta
-  const sales = await this.orm.searchRead("sale.order", domain, ['amount_total']); 
-
-  // Calcular el monto total de las ventas
-  let totalAmount = 0;
-  sales.forEach(sale => {
-      totalAmount += sale.amount_total;
-  });
-
-  const data = totalAmount;  // Esto debería ser tu valor 'data'
-  const prev_data = 12;  // Esto debería ser tu valor 'prev_data'
-
-  let percentage; 
-  if(prev_data !== 0) {
-    percentage = ((data - prev_data) / prev_data) * 100;
-  } else {
-    percentage = 1;  // Establece un valor predeterminado para evitar la división por cero
-  }
-
-  // Actualizar el estado con el monto total y el porcentaje
-  this.state.sales = {
-      total: totalAmount,
-      percentage: percentage
-  };
-
-  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); 
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
       name: "Quotations",
       res_model: "sale.order",
       domain,
+      context: {group_by: ['date_order']},
       views: [
-          [list_view.length > 0 ? list_view[0].res_id : false, "list"],
+          [false, "list"],
           [false, "form"],
       ]
-  });
-
-  // Remover esta línea si está causando un bucle infinito
-  // this.render();
-
-  console.log(this.state)
-  console.log(this.state.sales)
+  })
   console.log(this.state.period)
+  console.log(this.state)
 }
 
 
