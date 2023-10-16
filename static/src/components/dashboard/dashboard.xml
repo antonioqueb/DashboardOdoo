@@ -22,6 +22,8 @@
                             </div>
                         </div>
                     </div>
+                        <MetricCard onClick.bind="viewSalesIncome" name="'Sales Income'" value="state.orders ? state.orders.revenue : 'Loading...'" percentage="state.orders ? state.orders.revenue_percentage : 'Loading...'"/>
+
                         <MetricCard onClick.bind="viewOrders" name="'Orders'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewRevenues" name="'Revenues'" value="state.orders ? state.orders.revenue : 'Loading...'" percentage="state.orders ? state.orders.revenue_percentage : 'Loading...'"/>
                         <MetricCard onClick.bind="viewRevenues" name="'Average Order'" value="state.orders ? state.orders.average : 'Loading...'" percentage="state.orders ? state.orders.average_percentage : 'Loading...'"/>
