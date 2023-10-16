@@ -7,7 +7,7 @@
     </record>
 
     <record id="action_open_dasboard_g" model="ir.actions.client">
-        <field name="name">Dashboard Dirección General</field>
+        <field name="name">Gerencia de Planeación</field>
         <field name="tag">TobaccoMetricsPro.Dashboard</field>
     </record>
 
@@ -17,7 +17,7 @@
               sequence="20"/>
 
     <menuitem id="menu_dashboard_gerentes"
-              name="Dashboard Gerentes"
+              name="Gerencia de Planeación"
               action="action_open_dasboard_g"
               sequence="20"
               parent="menu_dashboard"
