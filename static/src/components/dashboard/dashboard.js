@@ -41,7 +41,7 @@ export class Dashboard extends Component {
     const data = await this.orm.searchCount("sale.order", domain)
     this.state.quotations.value = data
 
-    // previous period
+    // previous period yes of course
     let prev_domain = [['state', 'in', ['sent', 'draft']]]
     if (this.state.period > 0){
         prev_domain.push(['date_order','>', this.state.previous_date], ['date_order','<=', this.state.current_date])
