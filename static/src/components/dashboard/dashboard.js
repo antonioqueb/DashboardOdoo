@@ -11,8 +11,8 @@ export class Dashboard extends Component {
   setup(){
     this.state = useState({
         quotations: {
-            value:10,
-            percentage:6,
+            value: 0,
+            percentage: 0,
         },
         period:90,
     })
