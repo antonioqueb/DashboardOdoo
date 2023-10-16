@@ -35,6 +35,7 @@ export class Dashboard extends Component {
     // Metodo manejar el evento click del boton periodo
         onChangePeriod () {
             console.log(this.state.period);
+        
         }
    
     // Metodo para obtener los datos de ventas
@@ -42,9 +43,10 @@ export class Dashboard extends Component {
         const data = await this.orm.searchCount("sale.order", [
             ["state", "in", ["sale", "done"]]
         ]);
+        console.log('Data from getQuotations:', data);  // Agregar esta línea para depurar
         this.state.ventas.value = data;
-
     }
+    
 
 }
 
