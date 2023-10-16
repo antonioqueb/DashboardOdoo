@@ -1,6 +1,6 @@
 {
     'name': 'TobaccoMetricsPro',
-    'version': '1.0.3', 
+    'version': '1.0.4', 
     'category': 'Administration',
     'summary': 'Herramientas de análisis y visualización para la industria tabacalera.',
     'author': 'Antonio Queb',
