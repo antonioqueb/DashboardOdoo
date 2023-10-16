@@ -138,7 +138,7 @@ async viewSales(){
   // TODO: Necesitarás calcular los valores 'data' y 'prev_data' correctamente.
   // Los he seteado a 0 por ahora como placeholders.
   const data = totalAmount;  // Esto debería ser tu valor 'data'
-  const prev_data = 0;  // Esto debería ser tu valor 'prev_data'
+  const prev_data = 12;  // Esto debería ser tu valor 'prev_data'
 
   // Calcular el porcentaje de cambio
   const percentage = prev_data !== 0 ? ((data - prev_data) / prev_data) * 100 : 0;
