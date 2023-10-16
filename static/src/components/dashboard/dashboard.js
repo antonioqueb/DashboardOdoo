@@ -24,37 +24,37 @@ export class Dashboard extends Component {
         console.log('Initial state set:', this.state);  // Verificar el estado inicial
 
         // Conectar con el servicio ORM de Odoo
-        this.orm = useService("orm");
-        console.log('ORM service connected:', this.orm);  // Verificar la conexión con el servicio ORM
+        // this.orm = useService("orm");
+       // console.log('ORM service connected:', this.orm);  // Verificar la conexión con el servicio ORM
 
         // Obtener los datos de ventas durante la fase de inicio
-        onWillStart(async () => {
-            console.log('onWillStart triggered');  //   Verificar que onWillStart se dispara
-            await this.getQuotations();
-        });
+       // onWillStart(async () => {
+      //      console.log('onWillStart triggered');  //   Verificar que onWillStart se dispara
+      //      await this.getQuotations();
+       // });
     }
 
     // Método para manejar el evento de clic del botón periodo
-    onChangePeriod() {
-        console.log('onChangePeriod triggered with period:', this.state.period);  // Verificar que se dispara el evento y mostrar el periodo
-    }
-
+   // onChangePeriod() {
+       // console.log('onChangePeriod triggered with period:', this.state.period);  // Verificar que se dispara el evento y mostrar el periodo
+   // }
+    
     // Método para obtener los datos de ventas
-    async getQuotations() {
-        console.log('getQuotations method started');  // Verificar que el método getQuotations se inicia
-
-        try {
-            const data = await this.orm.searchCount("sale.order", [
-                ["state", "in", ["sale", "done"]]
-            ]);
-            console.log('Data retrieved from ORM:', data);  // Mostrar los datos recuperados del ORM
-
-            this.state.ventas.value = data;
-            console.log('Sales data set to state:', this.state.ventas.value);  // Verificar que los datos de ventas se establecen en el estado
-        } catch (error) {
-            console.error('Error occurred during data retrieval:', error);  // Capturar y mostrar cualquier error que ocurra durante la recuperación de datos
-        }
-    }
+   // async getQuotations() {
+      //  console.log('getQuotations method started');  // Verificar que el método getQuotations se inicia
+//
+  //      try {
+    //        const data = await this.orm.searchCount("sale.order", [
+      //          ["state", "in", ["sale", "done"]]
+        //    ]);
+          //  console.log('Data retrieved from ORM:', data);  // Mostrar los datos recuperados del ORM
+//
+  //          this.state.ventas.value = data;
+    //        console.log('Sales data set to state:', this.state.ventas.value);  // Verificar que los datos de ventas se establecen en el estado
+      //  } catch (error) {
+        //    console.error('Error occurred during data retrieval:', error);  // Capturar y mostrar cualquier error que ocurra durante la recuperación de datos
+     //   }
+   // }
 }
 
 
