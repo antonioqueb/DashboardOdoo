@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks"
 const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 
-export class Dashboard extends Component {
+export class Gerencia extends Component {
   setup(){
 
     this.state = useState({
@@ -168,7 +168,7 @@ viewRevenues(){
 // Set the template and components for the Dashboard component
 
 
-Dashboard.template = "TobaccoMetricsPro.Dashboard";
+Gerencia.template = "TobaccoMetricsPro.Dashboard";
 Dashboard.components = { MetricCard, ChartRenderer};
 
 
