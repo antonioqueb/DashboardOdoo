@@ -85,7 +85,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Tasa de Agotamiento de Stock</h3>
+                                    <h3 class="text-primary fw-bold">Cuota de Mercado</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
@@ -98,7 +98,7 @@
                         <div class="col m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Nivel de Servicio Interno</h3>
+                                    <h3 class="text-primary fw-bold">Puntualidad de Informes</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
