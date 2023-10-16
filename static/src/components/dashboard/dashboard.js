@@ -120,11 +120,21 @@ async viewQuotations(){
 
 // Card Sales
 
-async viewSales(){
-  let domain = [['state', 'in', ['sale', 'done']]]
-  if (this.state.period > 0){
-      domain.push(['date_order','>', this.state.current_date])
+async viewSales() {
+  let domain = [['state', 'in', ['sale', 'done']]];
+  if (this.state.period > 0) {
+      domain.push(['date_order', '>', this.state.current_date]);
   }
+
+  // Obtener el amount_total acumulado para las ventas que cumplen con los criterios del dominio
+  const totalAmount = await this.orm.readGroup(
+      "sale.order",
+      domain,
+      ["amount_total:sum"],
+      []
+  );
+
+  console.log('Total Amount:', totalAmount[0].amount_total);  // Añadir una manera adecuada para mostrar el totalAmount en tu aplicación
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
@@ -136,11 +146,9 @@ async viewSales(){
           [false, "list"],
           [false, "form"],
       ]
-  })
-  console.log(this.state.period)
-  console.log(this.state)
-  console.log("codigfo nuevo")
+  });
 }
+
 
 
 
