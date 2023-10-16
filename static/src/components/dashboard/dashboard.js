@@ -132,9 +132,8 @@ async viewSales() {
       domain,
       ["amount_total:sum"],
       []
-      console.log(totalAmount[0].amount_total)
   );
-
+  
   console.log('Total Amount:', totalAmount[0].amount_total);  
 
   this.state.totalAmount = totalAmount[0].amount_total; // Asegúrate de que esto está dentro del método
