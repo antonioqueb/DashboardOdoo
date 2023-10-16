@@ -27,4 +27,10 @@
               sequence="20"
               parent="menu_dashboard"
               />
+    <menuitem id="menu_dashboard_gerentes_financieros"
+              name="Gerencia Financiera"
+              action="action_open_dasboard_gf"
+              sequence="20"
+              parent="menu_dashboard"
+              />
 </odoo>
