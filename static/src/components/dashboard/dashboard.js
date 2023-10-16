@@ -11,15 +11,14 @@ export class Dashboard extends Component {
 
     // Este método se ejecutará durante la fase de configuración del componente.
     setup() {
-        console.log('Setup method started');  // Verificar que el método setup se inicia
+       // console.log('Setup method started');  // Verificar que el método setup se inicia
 
         // Establecer el estado inicial
         this.state = useState({
             ventas: {
                 value: 2421,
                 porcentage: 12.2,
-            },
-            period: 90,
+            }
         });
       //  console.log('Initial state set:', this.state);  // Verificar el estado inicial
 
