@@ -126,7 +126,7 @@ async getSales(){
   const prev_average = await this.orm.readGroup("sale.order", prev_domain, ["amount_total:avg"], [])
   const average_percentage = ((current_average[0].amount_total - prev_average[0].amount_total) / prev_average[0].amount_total) * 100
 
-  this.state.sales = {
+  this.state.orders = {
       value: data,
       percentage: percentage.toFixed(2),
       revenue: `$${(current_revenue[0].amount_total/1000).toFixed(2)}K`,
