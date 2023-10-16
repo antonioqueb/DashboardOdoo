@@ -12,12 +12,12 @@
     </record>
 
     <menuitem id="menu_dashboard"
-              name="Dashboard"
+              name="Tobacco Metrics Pro"
               action="action_open_dasboard_dg"
               sequence="20"/>
 
     <menuitem id="menu_dashboard_gerentes"
-              name="Dashboard"
+              name="Dashboard Gerentes"
               action="action_open_dasboard_g"
               sequence="20"
               parent="menu_dashboard"
