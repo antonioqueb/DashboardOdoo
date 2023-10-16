@@ -118,48 +118,6 @@ async viewQuotations(){
   })
 }
 
-// Card Sales
-
-async viewSales() {
-  let domain = [['state', 'in', ['sale', 'done']]];
-  if (this.state.period > 0) {
-      domain.push(['date_order', '>', this.state.current_date]);
-  }
-
-  // Obtener el amount_total acumulado para las ventas que cumplen con los criterios del dominio
-  const totalAmount = await this.orm.readGroup(
-      "sale.order",
-      domain,
-      ["amount_total:sum"],
-      []
-      console.log(totalAmount[0].amount_total)
-  );
-
-  console.log('Total Amount:', totalAmount[0].amount_total);
-
-  this.state.totalAmount = totalAmount[0].amount_total; // Asegúrate de que esto está dentro del método
-
-  this.actionService.doAction({
-      type: "ir.actions.act_window",
-      name: "Quotations",
-      res_model: "sale.order",
-      domain,
-      context: {group_by: ['date_order']},
-      views: [
-          [false, "list"],
-          [false, "form"],
-      ]
-  });
-}
-
-
-
-
-
-
-
-
-
 
 viewOrders(){
   let domain = [['state', 'in', ['sale', 'done']]]
