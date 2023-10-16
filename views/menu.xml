@@ -15,4 +15,9 @@
               name="Dashboard"
               action="action_open_dasboard_dg"
               sequence="20"/>
+
+    <menuitem id="menu_dashboard_gerentes"
+              name="Dashboard"
+              action="action_open_dasboard_g"
+              sequence="20"/>
 </odoo>
