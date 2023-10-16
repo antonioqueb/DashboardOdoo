@@ -146,6 +146,10 @@ async viewSales(){
           [false, "form"],
       ]
   });
+
+  console.log(this.state.sales)
+  console.log(this.state.period)
+  
 }
 
 
