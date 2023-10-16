@@ -10,11 +10,9 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 export class Dashboard extends Component {
   setup(){
     this.state = useState({
-        quotations: {
-            value: 0,
-            percentage: 0,
-        },
-        period:90,
+        quotations: {},
+        period: 90,
+
     })
     this.orm = useService("orm")
     console.log(this.orm)
