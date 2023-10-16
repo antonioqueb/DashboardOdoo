@@ -100,7 +100,7 @@ async getOrders(){
 }
 
 async getSales(){
-  let domain = [['state', 'in', ['sale', 'done']]]
+  let domain = [['state', 'in', ['sale']]]
   if (this.state.period > 0){
       domain.push(['date_order','>', this.state.current_date])
   }
@@ -108,7 +108,7 @@ async getSales(){
   //this.state.quotations.value = data
 
   // previous period
-  let prev_domain = [['state', 'in', ['sale', 'done']]]
+  let prev_domain = [['state', 'in', ['sale']]]
   if (this.state.period > 0){
       prev_domain.push(['date_order','>', this.state.previous_date], ['date_order','<=', this.state.current_date])
   }
@@ -126,7 +126,7 @@ async getSales(){
   const prev_average = await this.orm.readGroup("sale.order", prev_domain, ["amount_total:avg"], [])
   const average_percentage = ((current_average[0].amount_total - prev_average[0].amount_total) / prev_average[0].amount_total) * 100
 
-  this.state.orders = {
+  this.state.sales = {
       value: data,
       percentage: percentage.toFixed(2),
       revenue: `$${(current_revenue[0].amount_total/1000).toFixed(2)}K`,
@@ -165,7 +165,7 @@ async viewQuotations(){
 // Card Sales
 
 viewSales(){
-  let domain = [['state', 'in', ['sale', 'done']]]
+  let domain = [['state', 'in', ['sale']]]
   if (this.state.period > 0){
       domain.push(['date_order','>', this.state.current_date])
   }
