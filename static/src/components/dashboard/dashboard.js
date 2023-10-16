@@ -73,7 +73,7 @@ async getOrders(){
   }
   const prev_data = await this.orm.searchCount("sale.order", prev_domain)
   const percentage = ((data - prev_data)/prev_data) * 100
-  //this.state.quotations.percentage = percentage.toFixed(2)
+  //this.state.quotatioccns.percentage = percentage.toFixed(2)
 
   //revenues
   const current_revenue = await this.orm.readGroup("sale.order", domain, ["amount_total:sum"], [])
