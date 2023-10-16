@@ -9,11 +9,9 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 export class Dashboard extends Component {
   setup(){
+
     this.state = useState({
-        quotations: {
-            value: 0,
-            percentage: 0,
-        },
+        quotations: {},
         period: 90,
 
     })
@@ -121,6 +119,7 @@ async viewQuotations(){
   })
 }
 
+
 viewOrders(){
   let domain = [['state', 'in', ['sale', 'done']]]
   if (this.state.period > 0){
@@ -160,6 +159,10 @@ viewRevenues(){
 }
 
 }
+
+
+
+// Set the template and components for the Dashboard component
 
 
 Dashboard.template = "TobaccoMetricsPro.Dashboard";
