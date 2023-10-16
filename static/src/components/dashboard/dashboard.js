@@ -9,7 +9,9 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 export class Dashboard extends Component {
   setup(){
-    
+    self = self.with_context(force_company=None)
+
+
     this.state = useState({
         quotations: {},
         period: 90,
@@ -17,7 +19,7 @@ export class Dashboard extends Component {
     })
     this.orm = useService("orm")
     console.log(this.orm)
-    this.actionService = useService("action")/**/
+    this.actionService = useService("action")
     console.log(this.actionService)
 }
 
@@ -52,7 +54,7 @@ export class Dashboard extends Component {
     console.log(this.state.quotations)
     console.log(this.state.period)
 
-    
+
 
 }
 
@@ -97,77 +99,44 @@ async getOrders(){
   //this.env.services.company
 }
 
-
-async getSalesIncome(){
-    let domain = [['state', 'in', ['sale', 'done']]]
-    if (this.state.period > 0){
-    domain.push(['date_order','>', this.state.current_date])
-    }
-
-   const data = await this.orm.readGroup("sale.order", domain, ["amount_total:sum"], [])
+async getSales(){
+  let domain = [['state', 'in', ['sale', 'done']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
+  }
+  const data = await this.orm.searchCount("sale.order", domain)
+  //this.state.quotations.value = data
 
   // previous period
-     let prev_domain = [['state', 'in', ['sale', 'done']]]
-     if (this.state.period > 0){
-    prev_domain.push(['date_order','>', this.state.previous_date], ['date_order','<=', this.state.current_date])
-    }
-    const prev_data = await this.orm.searchCount("sale.order", prev_domain)
-    const percentage = ((data - prev_data)/prev_data) * 100
+  let prev_domain = [['state', 'in', ['sale', 'done']]]
+  if (this.state.period > 0){
+      prev_domain.push(['date_order','>', this.state.previous_date], ['date_order','<=', this.state.current_date])
+  }
+  const prev_data = await this.orm.searchCount("sale.order", prev_domain)
+  const percentage = ((data - prev_data)/prev_data) * 100
+  //this.state.quotations.percentage = percentage.toFixed(2)
 
-    //revenues
-    const current_revenue = await this.orm.readGroup("sale.order", domain, ["amount_total:sum"], [])
-    const prev_revenue = await this.orm.readGroup("sale.order", prev_domain, ["amount_total:sum"], [])
-    const revenue_percentage = ((current_revenue[0].amount_total - prev_revenue[0].amount_total) / prev_revenue[0].amount_total) * 100
+  //revenues
+  const current_revenue = await this.orm.readGroup("sale.order", domain, ["amount_total:sum"], [])
+  const prev_revenue = await this.orm.readGroup("sale.order", prev_domain, ["amount_total:sum"], [])
+  const revenue_percentage = ((current_revenue[0].amount_total - prev_revenue[0].amount_total) / prev_revenue[0].amount_total) * 100
 
-    //average
-    const current_average = await this.orm.readGroup("sale.order", domain, ["amount_total:avg"], [])
-    const prev_average = await this.orm.readGroup("sale.order", prev_domain, ["amount_total:avg"], [])
-    const average_percentage = ((current_average[0].amount_total - prev_average[0].amount_total) / prev_average[0].amount_total) * 100
+  //average
+  const current_average = await this.orm.readGroup("sale.order", domain, ["amount_total:avg"], [])
+  const prev_average = await this.orm.readGroup("sale.order", prev_domain, ["amount_total:avg"], [])
+  const average_percentage = ((current_average[0].amount_total - prev_average[0].amount_total) / prev_average[0].amount_total) * 100
 
-    this.state.orders = {
-    value: data,
-    percentage: percentage.toFixed(2),
-    revenue: `$${(current_revenue[0].amount_total/1000).toFixed(2)}K`,
-    revenue_percentage: revenue_percentage.toFixed(2),
-    average: `$${(current_average[0].amount_total/1000).toFixed(2)}K`,
-    average_percentage: average_percentage.toFixed(2),
-    }
+  this.state.orders = {
+      value: data,
+      percentage: percentage.toFixed(2),
+      revenue: `$${(current_revenue[0].amount_total/1000).toFixed(2)}K`,
+      revenue_percentage: revenue_percentage.toFixed(2),
+      average: `$${(current_average[0].amount_total/1000).toFixed(2)}K`,
+      average_percentage: average_percentage.toFixed(2),
+  }
 
-    //this.env.services.company
-    }
-
-
-
-
-
-
-
-    async viewSalesIncome(){
-      let domain = [['state', 'in', ['sale', 'done']]]
-        if (this.state.period > 0){
-        domain.push(['date_order','>', this.state.current_date])
-        }
-    this.actionService.doAction({
-    type: "ir.actions.act_window",
-    name: "Sales Income",
-    res_model: "sale.order",
-    domain,
-    context: {group_by: ['date_order']},
-    views: [
-    [false, "list"],
-    [false, "form"],
-    ]
-    })
-    }
-
-
-
-
-
-
-
-    }
-
+  //this.env.services.company
+}
 
 
 
@@ -195,23 +164,11 @@ async viewQuotations(){
 
 // Card Sales
 
-async viewSales() {
-  let domain = [['state', 'in', ['sale', 'done']]];
-  if (this.state.period > 0) {
-      domain.push(['date_order', '>', this.state.current_date]);
+viewSales(){
+  let domain = [['state', 'in', ['sale', 'done']]]
+  if (this.state.period > 0){
+      domain.push(['date_order','>', this.state.current_date])
   }
-
-  // Obtener el amount_total acumulado para las ventas que cumplen con los criterios del dominio
-  const totalAmount = await this.orm.readGroup(
-      "sale.order",
-      domain,
-      ["amount_total:sum"],
-      []
-  );
-
-  console.log('Total Amount:', totalAmount[0].amount_total);
-
-  this.state.totalAmount = totalAmount[0].amount_total; // Asegúrate de que esto está dentro del método
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
@@ -223,7 +180,7 @@ async viewSales() {
           [false, "list"],
           [false, "form"],
       ]
-  });
+  })
 }
 
 
