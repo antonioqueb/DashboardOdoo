@@ -164,7 +164,6 @@ async viewSales(){
           [false, "form"],
       ]
   });
-  this.render();
 
   console.log(this.state)
   console.log(this.state.sales)
