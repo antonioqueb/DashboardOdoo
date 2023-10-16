@@ -114,13 +114,27 @@ async viewQuotations(){
   })
 }
 
+// Card Sales
+
 async viewSales(){
   let domain = [['state', 'in', ['sale']]]
   if (this.state.period > 0){
       domain.push(['date_order','>', this.state.current_date])
   }
 
-  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id'])  // Asegúrate de reemplazar 'view_sale_order_tree' con el nombre actual de la vista de lista que deseas usar
+  // Obtener las órdenes de venta
+  const sales = await this.orm.searchRead("sale.order", domain, ['amount_total']); // Asegúrate de adaptar este código según tus necesidades
+
+  // Calcular el monto total de pagos registrados
+  const totalAmount = sales.reduce((total, sale) => total + sale.amount_total, 0);
+
+  // Actualizar el estado con el monto total
+  this.state.sales = {
+      total: totalAmount.toFixed(2), // Formatear a dos decimales, adaptar según sea necesario
+      // Actualiza otras propiedades según sea necesario
+  };
+
+  let list_view = await this.orm.searchRead("ir.model.data", [['name', '=', 'view_sale_order_tree']], ['res_id']); // Asegúrate de reemplazar 'view_sale_order_tree' con el nombre actual de la vista de lista que deseas usar
 
   this.actionService.doAction({
       type: "ir.actions.act_window",
@@ -131,18 +145,11 @@ async viewSales(){
           [list_view.length > 0 ? list_view[0].res_id : false, "list"],
           [false, "form"],
       ]
-  })
+  });
 }
 
 
-//getDates() {
-  //const currentDate = new Date();
-  //const previousDate = new Date();
-  //previousDate.setDate(currentDate.getDate() - this.state.period);
-  
-  //this.state.current_date = currentDate;
-  //this.state.previous_date = previousDate;
-//}
+
 
 getDates(){
   this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
