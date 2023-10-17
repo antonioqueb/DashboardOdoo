@@ -5,8 +5,8 @@
             <!--  Div container Fluid Top -->
 
             <!-- Title -->
-            <div class="row bg-body">
-                <div class="col-10 d-flex align-items-center justify-content-between">
+            <div class="row m-3 g-body">
+                <div class="col-lg-8 d-flex align-items-center justify-content-between">
                     <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
                 </div>
                 <div class="col-2">
