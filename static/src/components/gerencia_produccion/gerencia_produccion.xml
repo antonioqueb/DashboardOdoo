@@ -3,6 +3,11 @@
     <t t-name="TobaccoMetricsPro.GerenciaProduccion" owl="1">
         <div class="vh-100 overflow-auto bg-success">
             <!--  Div container Fluid Top -->
+            <div class="container-fluid">
+                <div class="row">
+                    <h1 class="text-center text-white bg-primary">Gerencia de Producción</h1>
+                </div>
+            </div>
                
             <!-- Div container Fluid Down-->    
         </div>        
