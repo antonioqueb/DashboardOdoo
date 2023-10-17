@@ -36,6 +36,9 @@ export class ChartRenderer extends Component {
         const ctx = this.chartRef.el.getContext('2d');
         const gradient1 = this.getGradient(ctx, '#0439D9', '#395ab9');
         const gradient2 = this.getGradient(ctx, '#0460D9', '#417cb0');
+        const gradient3 = this.getGradient(ctx, '#0476D9', '#183b9c');
+        const gradient4 = this.getGradient(ctx, '#20559b', '#297eea');
+        const gradient5 = this.getGradient(ctx, '#0476D9', '#183b9c');
 
         new Chart(ctx, {
             type: this.props.type,
@@ -48,7 +51,7 @@ export class ChartRenderer extends Component {
                         label: 'Resumen de Resultados',
                         data: this.staticData['Ventas netas'],
                         fill: true,
-                        backgroundColor: '#0476D9',
+                        backgroundColor: ['#0439D9', '#395ab9', gradient1, gradient1, gradient4, gradient5],
                         borderColor: '#183b9c',
                         tension: 0.1
                     },
@@ -56,21 +59,43 @@ export class ChartRenderer extends Component {
                         label: 'Resumen de Resultados',
                         data: this.staticData['Costo neto'],
                         fill: true,
-                        backgroundColor: '#20559b',
+                        backgroundColor: ['#0439D9', '#395ab9', gradient1, gradient1, gradient4, gradient5],
                         borderColor: '#297eea',
                         tension: 0.1
                     }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
+
                 plugins: {
                     legend: {
+                        display: true,
                         position: 'bottom',
+                        labels: {
+                            color: '#183b9c',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+
+                            }
+                        }
                     },
                     title: {
                         display: true,
                         text: this.props.title,
                         position: 'bottom',
+                    },
+                    tooltip: {
+                        backgroundColor: '#183b9c',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+
+                        }
                     }
                 }
             },
