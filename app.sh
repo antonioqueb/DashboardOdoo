@@ -11,5 +11,5 @@ while true; do
     git pull
 
     # Espera 30 segundos antes de la próxima  ejecución
-    sleep 20
+    sleep 120
 done
