@@ -98,13 +98,7 @@ export class ChartRenderer extends Component {
                         }
                     }
                 }
-            },
-        });
-    }
-
-    // Este método puedes utilizarlo para mostrar los datos estáticos en la consola o adaptarlo para mostrarlos en tu interfaz de usuario
-    logStaticData() {
-        console.table(this.staticData);
+            });
     }
 }
 
