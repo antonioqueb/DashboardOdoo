@@ -16,6 +16,9 @@ while true; do
     # Realizar el commit
     git commit -m "$MSG_COMMIT"
 
+    # Subir los cambios al repositorio remoto en la rama "main"
+    git push origin main  # Asegúrate de ajustar "origin" y "main" según tu configuración
+
     # Esperar 60 segundos antes de la próxima iteración
     sleep 60
 done
