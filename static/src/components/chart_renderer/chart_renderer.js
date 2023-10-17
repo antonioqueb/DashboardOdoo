@@ -73,7 +73,7 @@ export class ChartRenderer extends Component {
                         backgroundColor: [gradient11, gradient12, gradient13, gradient14, gradient15,
                                           gradient16, gradient17, gradient18, gradient19, gradient20,
                                           gradient21, gradient22, gradient23, gradient24, gradient25,
-                                          gradient26, gradient27, gradient28, gradient29, gradient30]
+                                          gradient26, gradient27, gradient28, gradient29, gradient30],
                         tension: 0.1
                     },
                     {
@@ -83,7 +83,7 @@ export class ChartRenderer extends Component {
                         backgroundColor: [gradient11, gradient12, gradient13, gradient14, gradient15,
                                           gradient16, gradient17, gradient18, gradient19, gradient20,
                                           gradient21, gradient22, gradient23, gradient24, gradient25,
-                                          gradient26, gradient27, gradient28, gradient29, gradient30]
+                                          gradient26, gradient27, gradient28, gradient29, gradient30],
                         borderColor: '#297eea',
                         tension: 0.1
                     }]
