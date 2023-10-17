@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="TobaccoMetricsPro.GerenciaProduccion" owl="1">
-        <div class="vh-100 overflow-auto ">
+        <div class="vh-100 overflow-auto">
             <!-- Div container Fluid Top -->
 
             <!-- Title -->
-            <div class="row mx-lg-5">
-                <div class="col-lg-10 d-flex align-items-start">
+            <div class="row mx-lg-5 py-3"> <!-- Agregado padding vertical para espacio adicional arriba y abajo -->
+                <div class="col-lg-10 d-flex align-items-center">
                     <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
                 </div>
                 <div class="col-lg-2 d-flex align-items-center justify-content-center">
-                    <div>
+                    <div class="p-2 border rounded"> <!-- Agregado padding, border y bordes redondeados -->
                            <select class="form-select" t-model="state.period" t-on-change="onChangePeriod">
                                <option value="0">Seleccione Periodo</option>
                                <option value="7">Last 7 Days</option>
@@ -20,13 +20,6 @@
                            </select>
                       </div>
                 </div>
-
-
-
-
-
-
-            <!-- Div container Fluid Down-->
             </div>
         </div>
     </t>
