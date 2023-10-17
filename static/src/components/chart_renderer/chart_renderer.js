@@ -28,7 +28,7 @@ export class ChartRenderer extends Component {
     renderChart() {
         const ctx = this.chartRef.el.getContext('2d');
         new Chart(ctx, {
-            type: 'bar',
+            type: this.props.type,
             data: {
                 labels: this.staticData['Meses'],
                 datasets: [
