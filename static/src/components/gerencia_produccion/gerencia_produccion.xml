@@ -9,7 +9,7 @@
                 <div class="col-lg-10 d-flex align-items-start">
                     <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
                 </div>
-                <div class="col-lg-2 d-flex align-items-center justify-content-center bg-primary">
+                <div class="col-lg-2 d-flex align-items-center justify-content-center">
                     <div>
                            <select class="form-select" t-model="state.period" t-on-change="onChangePeriod">
                                <option value="0">Seleccione Periodo</option>
