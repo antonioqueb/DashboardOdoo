@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks"
 const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 
-export class GerenciaPlaneacion extends Component {
+export class GerenciaProduccion extends Component {
   setup(){
 
     this.state = useState({
