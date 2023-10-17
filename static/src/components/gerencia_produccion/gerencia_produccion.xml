@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
     <t t-name="TobaccoMetricsPro.GerenciaProduccion" owl="1">
         <div class="vh-100 overflow-auto bg-success">
-            <!-- <div class="container-fluid"> -->
+            <!--  Div container Fluid Top -->
                
             <!-- Div container Fluid Down-->    
         </div>        
