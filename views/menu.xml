@@ -2,62 +2,74 @@
 <odoo>
     <!-- Define una acción a ejecutar -->
 
-
-    <record id="action_open_dasboard_dg" model="ir.actions.client">
+    <!-- Acciones -->
+    <record id="action_open_dashboard_dg" model="ir.actions.client">
         <field name="name">Dashboard Dirección General</field>
         <field name="tag">TobaccoMetricsPro.Dashboard</field>
     </record>
 
-    <record id="action_open_dasboard_g" model="ir.actions.client">
+    <record id="action_open_dashboard_g" model="ir.actions.client">
         <field name="name">Gerencia de Planeación</field>
         <field name="tag">TobaccoMetricsPro.GerenciaPlaneacion</field>
     </record>
 
-    <record id="action_open_dasboard_gf" model="ir.actions.client">
+    <record id="action_open_dashboard_gf" model="ir.actions.client">
         <field name="name">Gerencia de Finanzas</field>
         <field name="tag">TobaccoMetricsPro.GerenciaFinanciera</field>
     </record>
 
-    <record id="action_open_dasboard_prod" model="ir.actions.client">
-        <field name="name">Gerencia de Pproducción</field>
+    <record id="action_open_dashboard_prod" model="ir.actions.client">
+        <field name="name">Gerencia de Producción</field>
         <field name="tag">TobaccoMetricsPro.GerenciaProduccion</field>
     </record>
 
+    <!-- Menú principal -->
     <menuitem id="menu_dashboard"
               name="Tobacco Metrics Pro"
-              action="action_open_dasboard_dg"
               sequence="10"/>
 
-    <!-- Este es el nuevo ítem de menú que actuará como contenedor -->
+    <!-- Submenús bajo el menú principal -->
+    <menuitem id="menu_direccion"
+              name="Dirección"
+              parent="menu_dashboard"
+              sequence="15"/>
+
     <menuitem id="menu_gerencia"
               name="Gerencias"
               parent="menu_dashboard"
-              sequence="15"/>
+              sequence="20"/>
 
-        <!-- Este es el nuevo ítem de menú que actuará como contenedor -->
-    <menuitem id="menu_gerencia_direccion_general"
-              name="Dirección General"
+    <menuitem id="menu_jefaturas"
+              name="Jefaturas"
               parent="menu_dashboard"
-              sequence="15"/>
+              sequence="25"/>
 
-    <!-- Estos menús ahora son hijos del menú "Gerencia" -->
+    <!-- Ítems bajo el submenú Dirección -->
+    <menuitem id="menu_dashboard_direccion_general"
+              name="Dirección General"
+              action="action_open_dashboard_dg"
+              sequence="30"
+              parent="menu_direccion"/>
+
+    <!-- Ítems bajo el submenú Gerencias -->
     <menuitem id="menu_dashboard_gerentes"
               name="Gerencia de Planeación"
-              action="action_open_dasboard_g"
-              sequence="20"
-              parent="menu_gerencia"
-              />
-              
+              action="action_open_dashboard_g"
+              sequence="35"
+              parent="menu_gerencia"/>
+
     <menuitem id="menu_dashboard_gerentes_financieros"
               name="Gerencia Financiera"
-              action="action_open_dasboard_gf"
-              sequence="30"
-              parent="menu_gerencia"
-              />
+              action="action_open_dashboard_gf"
+              sequence="40"
+              parent="menu_gerencia"/>
+
     <menuitem id="menu_dashboard_gerentes_produccion"
               name="Gerencia de Producción"
-              action="action_open_dasboard_prod"
-              sequence="40"
-              parent="menu_gerencia"
-              />
+              action="action_open_dashboard_prod"
+              sequence="45"
+              parent="menu_gerencia"/>
+
+    <!-- Puedes agregar ítems bajo el submenú Jefaturas aquí según sea necesario -->
+
 </odoo>
