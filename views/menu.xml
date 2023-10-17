@@ -30,7 +30,7 @@
 
     <!-- Submenús bajo el menú principal -->
     <menuitem id="menu_direccion"
-              name="Dirección"
+              name="Dirección General"
               parent="menu_dashboard"
               sequence="15"/>
 
