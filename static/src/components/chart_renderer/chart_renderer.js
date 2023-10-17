@@ -49,15 +49,15 @@ export class ChartRenderer extends Component {
                         data: this.staticData['Ventas netas'],
                         fill: true,
                         backgroundColor: '##0476D9',
-                        borderColor: '#0439D9',
+                        borderColor: '#183b9c',
                         tension: 0.1
                     },
                     {
                         label: 'Resumen de Resultados',
                         data: this.staticData['Costo neto'],
                         fill: true,
-                        backgroundColor: '#0460D9',
-                        borderColor: '#0460D9',
+                        backgroundColor: '#20559b',
+                        borderColor: '#297eea',
                         tension: 0.1
                     }]
             },
