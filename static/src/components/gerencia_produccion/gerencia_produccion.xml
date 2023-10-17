@@ -5,7 +5,7 @@
             <!--  Div container Fluid Top -->
 
             <!-- Title -->
-            <div class="row">
+            <div class="row bg-success">
                 <div class="col-9">
                     <h1 class="text-center">Gerencia de Producción</h1>
                 </div>
