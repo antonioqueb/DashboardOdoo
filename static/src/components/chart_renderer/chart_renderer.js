@@ -1,119 +1,103 @@
 /** @odoo-module */
 
-import { registry } from "@web/core/registry"
-import { loadJS } from "@web/core/assets"
-const { Component, onWillStart, useRef, onMounted } = owl
+import { registry } from "@web/core/registry";
+import { loadJS } from "@web/core/assets";
+const { Component, onWillStart, useRef, onMounted } = owl;
 
 export class ChartRenderer extends Component {
     setup() {
-        this.chartRef = useRef("chart")
+        this.chartRef = useRef("chart");
         this.staticData = {
-            'Meses': ['Mayo', 'Junio', 'Julio', 'Agosto', "Septiembre",'Octubre'],
-            'Ventas netas': [139, 135, 139, 140, 143, 150],
-            'Costo neto': [52, 54, 52, 35, 40, 45],
-            'Total, Utilidad Bruta': [87, 80, 87, 89, 103, 105],
-            'Total, Gasto de admón.': [7, 14, 6, 6, 7, 7],
-            'Total, Gasto de Venta': [25, 23, 30, 21, 19, 19],
-            'Total, en Gastos': [32, 37, 37, 34, 21, 45],
-            'Impuestos Federales': [8, 7, 7, 6, 8, 7],
-            'Utilidad Neta': [48, 37, 43, 56, 46, 65]
+            'Meses': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            'Ventas netas': [120, 125, 130, 133, 139, 135, 139, 142, 145, 150, 155, 160],
+            'Costo neto': [45, 47, 49, 50, 52, 54, 52, 55, 57, 59, 60, 62],
+            'Total, Utilidad Bruta': [75, 78, 81, 83, 87, 80, 87, 87, 88, 91, 95, 98],
+            'Total, Gasto de admón.': [5, 6, 6, 6, 7, 14, 6, 7, 8, 9, 10, 11],
+            'Total, Gasto de Venta': [20, 21, 22, 23, 25, 23, 30, 31, 32, 33, 34, 35],
+            'Total, en Gastos': [25, 27, 28, 29, 32, 37, 37, 38, 40, 42, 44, 46],
+            'Impuestos Federales': [7, 7, 7, 7, 8, 7, 7, 8, 8, 9, 9, 10],
+            'Utilidad Neta': [43, 44, 46, 47, 48, 37, 43, 41, 40, 40, 42, 42]
         };
         onWillStart(async () => {
-            await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js")
-        })
+            await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js");
+        });
 
-        onMounted(() => this.renderChart())
-    }
-
-    getGradient(ctx, color1, color2) {
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, color1);
-        gradient.addColorStop(1, color2);
-        return gradient;
+        onMounted(() => this.renderChart());
     }
 
     renderChart() {
         const ctx = this.chartRef.el.getContext('2d');
-
-        const gradient11 = this.getGradient(ctx, '#89a1cf', '#299b45');
-        const gradient12 = this.getGradient(ctx, '#a698b9', '#394e67');
-        const gradient13 = this.getGradient(ctx, '#6979a3', '#299b45');
-        const gradient14 = this.getGradient(ctx, '#89a1cf', '#394e67');
-        const gradient15 = this.getGradient(ctx, '#a698b9', '#6979a3');
-
-        const gradient16 = this.getGradient(ctx, '#394e67', '#6979a3');
-        const gradient17 = this.getGradient(ctx, '#89a1cf', '#a698b9');
-        const gradient18 = this.getGradient(ctx, '#299b45', '#394e67');
-        const gradient19 = this.getGradient(ctx, '#a698b9', '#89a1cf');
-        const gradient20 = this.getGradient(ctx, '#6979a3', '#394e67');
-
-        const gradient21 = this.getGradient(ctx, '#394e67', '#89a1cf');
-        const gradient22 = this.getGradient(ctx, '#6979a3', '#a698b9');
-        const gradient23 = this.getGradient(ctx, '#89a1cf', '#299b45');
-        const gradient24 = this.getGradient(ctx, '#a698b9', '#394e67');
-        const gradient25 = this.getGradient(ctx, '#6979a3', '#299b45');
-        const gradient26 = this.getGradient(ctx, '#89a1cf', '#394e67');
-        const gradient27 = this.getGradient(ctx, '#a698b9', '#6979a3');
-        const gradient28 = this.getGradient(ctx, '#394e67', '#89a1cf');
-        const gradient29 = this.getGradient(ctx, '#6979a3', '#a698b9');
-        const gradient30 = this.getGradient(ctx, '#89a1cf', '#299b45')
-
         new Chart(ctx, {
-            type: this.props.type,
+            type: 'bar',
             data: {
-                labels: [
-                    'Mayo', 'Junio', 'Julio', 'Agosto', "Septiembre",'Octubre'
-                ],
+                labels: this.staticData['Meses'],
                 datasets: [
                     {
-                        label: 'Resumen de Resultados',
+                        label: 'Ventas netas',
                         data: this.staticData['Ventas netas'],
-                        fill: true,
-                        borderColor: '#183b9c',
-                        backgroundColor: [gradient11, gradient12, gradient13, gradient14, gradient15,
-                                          gradient16, gradient17, gradient18, gradient19, gradient20,
-                                          gradient21, gradient22, gradient23, gradient24, gradient25,
-                                          gradient26, gradient27, gradient28, gradient29, gradient30],
-                        tension: 0.1
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
                     },
                     {
-                        label: 'Resumen de Resultados',
+                        label: 'Costo neto',
                         data: this.staticData['Costo neto'],
-                        fill: true,
-                        backgroundColor: [gradient11, gradient12, gradient13, gradient14, gradient15,
-                                          gradient16, gradient17, gradient18, gradient19, gradient20,
-                                          gradient21, gradient22, gradient23, gradient24, gradient25,
-                                          gradient26, gradient27, gradient28, gradient29, gradient30],
-                        borderColor: '#297eea',
-                        tension: 0.1
-                    }]
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Utilidad Bruta',
+                        data: this.staticData['Total, Utilidad Bruta'],
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Gasto de admón.',
+                        data: this.staticData['Total, Gasto de admón.'],
+                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                        borderColor: 'rgba(255, 159, 64, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Gasto de Venta',
+                        data: this.staticData['Total, Gasto de Venta'],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Impuestos Federales',
+                        data: this.staticData['Impuestos Federales'],
+                        backgroundColor: 'rgba(201, 203, 207, 0.2)',
+                        borderColor: 'rgba(201, 203, 207, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Utilidad Neta',
+                        data: this.staticData['Utilidad Neta'],
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        borderWidth: 1
+                    }
+                ]
             },
             options: {
-                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
                 plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-
-                    },
                     title: {
                         display: true,
-                        text: this.props.title,
-                        position: 'bottom',
-                    },
-                    tooltip: {
-                        backgroundColor: '#183b9c',
-                        titleColor: '#fff',
-                        bodyColor: '#fff',
-                        titleFont: {
-                            size: 15,
-                            weight: 'bold'
-                        },
-
-                        }
+                        text: 'Resumen financiero mensual (en millones de pesos mexicanos)',
+                        position: 'top',
                     }
                 }
-            });
+            }
+        });
     }
 }
 
