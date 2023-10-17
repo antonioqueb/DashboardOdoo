@@ -25,6 +25,10 @@
 
 
             <!-- Start Card -->
+            <div class="row">
+                                        <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+
+            </div>
 
 
 
