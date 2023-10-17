@@ -20,9 +20,6 @@ export class GerenciaProduccion extends Component {
     this.orm = useService("orm")
     this.actionService = useService("action")
 }
-async onMounted() {
-    await this.onChangePeriod();
-  }
 async onChangePeriod(){
     this.getDates()
     await this.getQuotations()
