@@ -70,14 +70,7 @@ export class ChartRenderer extends Component {
                     legend: {
                         display: true,
                         position: 'bottom',
-                        labels: {
-                            color: '#183b9c',
-                            font: {
-                                size: 14,
-                                weight: 'bold'
 
-                            }
-                        }
                     },
                     title: {
                         display: true,
@@ -89,7 +82,7 @@ export class ChartRenderer extends Component {
                         titleColor: '#fff',
                         bodyColor: '#fff',
                         titleFont: {
-                            size: 14,
+                            size: 15,
                             weight: 'bold'
                         },
 
