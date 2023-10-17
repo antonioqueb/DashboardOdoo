@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="TobaccoMetricsPro.GerenciaProduccion" owl="1">
+    <t t-name="TobaccoMetricsPro.GerencibodyaProduccion" owl="1">
         <div class="vh-100 overflow-auto bg-body">
             <!--  Div container Fluid Top -->
 
             <!-- Title -->
-            <div class="row bg-success">
-                <div class="col-10">
-                    <h1 class="text-center">Gerencia de Producción</h1>
+            <div class="row bg-body">
+                <div class="col-10 d-flex align-items-center justify-content-between">
+                    <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
                 </div>
                 <div class="col-2">
                     <div>
