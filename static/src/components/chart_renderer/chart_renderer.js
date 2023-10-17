@@ -34,8 +34,8 @@ export class ChartRenderer extends Component {
 
     renderChart() {
         const ctx = this.chartRef.el.getContext('2d');
-        const gradient1 = this.getGradient(ctx, '#0439D9', '#027313');
-        const gradient2 = this.getGradient(ctx, '#0460D9', '#034001');
+        const gradient1 = this.getGradient(ctx, '#ff7c7c', '#fffc7c');
+        const gradient2 = this.getGradient(ctx, '#7cffa6', '#7c9cff');
 
         new Chart(ctx, {
             type: this.props.type,
@@ -48,7 +48,7 @@ export class ChartRenderer extends Component {
                         label: 'Resumen de Resultados',
                         data: this.staticData['Ventas netas'],
                         fill: true,
-                        backgroundColor: '##0476D9',
+                        backgroundColor: '#0476D9',
                         borderColor: '#183b9c',
                         tension: 0.1
                     },
