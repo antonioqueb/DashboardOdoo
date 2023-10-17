@@ -28,7 +28,7 @@
 
     <!-- Este es el nuevo ítem de menú que actuará como contenedor -->
     <menuitem id="menu_gerencia" 
-              name="Gerencia" 
+              name="Gerencias" 
               parent="menu_dashboard" 
               sequence="15"/>
 
