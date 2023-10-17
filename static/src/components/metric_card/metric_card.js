@@ -22,10 +22,11 @@ export class MetricCard extends Component {
             case 'Margen de Utilidad':
             case 'Eficiencia':
             case 'Cuotas del mercado':
+            case 'ROI':
                 formattedNumber = num.toFixed(1) + '%';
                 break;
             case 'Ventas':
-            case 'Costos':
+            case 'Costo':
             case 'Utilidad':
             case 'Gastos':
             case 'Impuestos':
