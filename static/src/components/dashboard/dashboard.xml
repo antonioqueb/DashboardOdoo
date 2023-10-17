@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
                                 <div class="chart-container" style="max-width: 500px; max-height: 500px;">
-                                    <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
+                                    <ChartRenderer type="'bar'"/>
                                 </div>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                     <div class="chart-container" style="max-width: 500px; max-height: 500px;">
-                                           <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
+                                     <div class="chart-container" style="max-width: 800px; ">
+                                           <ChartRenderer type="'bar'" "/>
                                    </div>
                             </div>
                         </div>
