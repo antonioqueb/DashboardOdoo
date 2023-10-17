@@ -20,18 +20,23 @@ export class GerenciaProduccion extends Component {
     this.orm = useService("orm")
     this.actionService = useService("action")
 }
-
-  async onChangePeriod(){
+async onMounted() {
+    await this.onChangePeriod();
+  }
+async onChangePeriod(){
     this.getDates()
     await this.getQuotations()
     await this.getOrders()
 
   }
 
-  getDates(){
+getDates(){
     this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
     this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
-  }
+    console.log('Current date:', this.state.current_date);
+    console.log('Previous date:', this.state.previous_date);
+}
+
 
   async getQuotations(){
     let domain = [['state', 'in', ['sent', 'draft']]]
