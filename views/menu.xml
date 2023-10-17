@@ -26,6 +26,7 @@
     <!-- Menú principal -->
     <menuitem id="menu_dashboard"
               name="Tobacco Metrics Pro"
+              action="action_open_dashboard_dg"
               sequence="10"/>
 
     <!-- Submenús bajo el menú principal -->
