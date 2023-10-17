@@ -20,11 +20,16 @@ export class MetricCard extends Component {
             case 'Crecimiento promedio por producto':
             case 'Cumplimiento Normativo':
             case 'Margen de Utilidad':
+            case 'Eficiencia':
                 formattedNumber = num.toFixed(1) + '%';
                 break;
             case 'Ventas':
             case 'Costos':
             case 'Utilidad':
+            case 'Gastos':
+            case 'Impuestos':
+            case 'Utilidad Neta':
+
                 formattedNumber = '$' + num.toLocaleString('es-MX');
                 break;
             default:
