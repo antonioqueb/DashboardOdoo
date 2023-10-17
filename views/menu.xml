@@ -12,12 +12,12 @@
     </record>
 
     <record id="action_open_dasboard_gf" model="ir.actions.client">
-        <field name="name">Gerencia Financiera</field>
+        <field name="name">Gerencia de Finanzas</field>
         <field name="tag">TobaccoMetricsPro.GerenciaFinanciera</field>
     </record>
 
     <record id="action_open_dasboard_prod" model="ir.actions.client">
-        <field name="name">Gerencia Financiera</field>
+        <field name="name">Gerencia de Pproducción</field>
         <field name="tag">TobaccoMetricsPro.GerenciaFinanciera</field>
     </record>
 
@@ -44,6 +44,12 @@
               name="Gerencia Financiera"
               action="action_open_dasboard_gf"
               sequence="30"
+              parent="menu_gerencia"
+              />
+    <menuitem id="menu_dashboard_gerentes_produccion"
+              name="Gerencia de Producción"
+              action="action_open_dasboard_prod"
+              sequence="40"
               parent="menu_gerencia"
               />
 </odoo>
