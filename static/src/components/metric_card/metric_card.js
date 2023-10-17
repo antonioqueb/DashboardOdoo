@@ -16,11 +16,12 @@ export class MetricCard extends Component {
         let formattedNumber;
         switch (name.trim()) {
             case 'Calidad':
-            case 'Porcentaje de cumplimiento en RSE':
+            case 'Porcentaje de cumplimiento en RS':
             case 'Crecimiento promedio por producto':
             case 'Cumplimiento Normativo':
             case 'Margen de Utilidad':
             case 'Eficiencia':
+            case 'Cuotas del mercado':
                 formattedNumber = num.toFixed(1) + '%';
                 break;
             case 'Ventas':
