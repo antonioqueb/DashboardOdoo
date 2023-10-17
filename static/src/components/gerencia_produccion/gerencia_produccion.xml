@@ -34,15 +34,32 @@
             <!-- End Card -->
 
             <!-- Start Graph -->
-            <div class="row my-4 p-4 bg-white shadow-sm rounded">
+            <div class="row my-4 p-4 ">
                 <!-- Graph 1 -->
-                <div class="col-lg-6 mb-4">
-                    <ChartRenderer type="'doughnut'" title="'Top Products Report'" class="shadow-sm"/>
-                </div>
+                        <div class="col-lg-5 m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="text-primary fw-bold">Tasa de Entrega a tiempo</h3>
+                                    <div class="px-3 py-1 bg-green cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
+                            </div>
+                        </div>
                 <!-- Graph 2 -->
                 <div class="col-lg-6 mb-4">
-                    <ChartRenderer type="'doughnut'" title="'Top Products Report'" class="shadow-sm"/>
-                </div>
+                        <div class="col-lg-5 m-0 p-0">
+                            <div class="shadow-sm border m-2 p-4 bg-white">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="text-primary fw-bold">Tasa de Entrega a tiempo</h3>
+                                    <div class="px-3 py-1 bg-green cursor-pointer">
+                                        <span class="fa fa-arrow-right text-white"/>
+                                    </div>
+                                </div>
+                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
+                            </div>
+                        </div>                </div>
                 <!-- Puedes continuar agregando más gráficos según sea necesario -->
             </div>
             <!-- End Graph -->
