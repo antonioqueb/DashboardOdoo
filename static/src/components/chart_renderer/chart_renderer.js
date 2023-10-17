@@ -34,11 +34,29 @@ export class ChartRenderer extends Component {
 
     renderChart() {
         const ctx = this.chartRef.el.getContext('2d');
-        const gradient1 = this.getGradient(ctx, '#0439D9', '#395ab9');
-        const gradient2 = this.getGradient(ctx, '#0460D9', '#417cb0');
-        const gradient3 = this.getGradient(ctx, '#0476D9', '#183b9c');
-        const gradient4 = this.getGradient(ctx, '#20559b', '#297eea');
-        const gradient5 = this.getGradient(ctx, '#0476D9', '#183b9c');
+
+        const gradient11 = this.getGradient(ctx, '#89a1cf', '#299b45');
+        const gradient12 = this.getGradient(ctx, '#a698b9', '#394e67');
+        const gradient13 = this.getGradient(ctx, '#6979a3', '#299b45');
+        const gradient14 = this.getGradient(ctx, '#89a1cf', '#394e67');
+        const gradient15 = this.getGradient(ctx, '#a698b9', '#6979a3');
+
+        const gradient16 = this.getGradient(ctx, '#394e67', '#6979a3');
+        const gradient17 = this.getGradient(ctx, '#89a1cf', '#a698b9');
+        const gradient18 = this.getGradient(ctx, '#299b45', '#394e67');
+        const gradient19 = this.getGradient(ctx, '#a698b9', '#89a1cf');
+        const gradient20 = this.getGradient(ctx, '#6979a3', '#394e67');
+
+        const gradient21 = this.getGradient(ctx, '#394e67', '#89a1cf');
+        const gradient22 = this.getGradient(ctx, '#6979a3', '#a698b9');
+        const gradient23 = this.getGradient(ctx, '#89a1cf', '#299b45');
+        const gradient24 = this.getGradient(ctx, '#a698b9', '#394e67');
+        const gradient25 = this.getGradient(ctx, '#6979a3', '#299b45');
+        const gradient26 = this.getGradient(ctx, '#89a1cf', '#394e67');
+        const gradient27 = this.getGradient(ctx, '#a698b9', '#6979a3');
+        const gradient28 = this.getGradient(ctx, '#394e67', '#89a1cf');
+        const gradient29 = this.getGradient(ctx, '#6979a3', '#a698b9');
+        const gradient30 = this.getGradient(ctx, '#89a1cf', '#299b45')
 
         new Chart(ctx, {
             type: this.props.type,
