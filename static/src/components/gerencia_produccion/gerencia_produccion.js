@@ -9,30 +9,33 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 export class GerenciaProduccion extends Component {
   setup(){
+        this.state = useState({
+            quotations: {
+                value:10,
+                percentage:6,
+            },
+            period:90,
+        })
+        this.orm = useService("orm")
+        this.actionService = useService("action")
 
-    this.state = useState({
-        quotations: {},
-        period: 90,
+        onWillStart(async ()=>{
+            this.getDates()
+            await this.getQuotations()
+            await this.getOrders()
+        })
+    }
 
-    })
-      console.log("Initial period:", this.state.period);  // Agrega esta línea
+    async onChangePeriod(){
+        this.getDates()
+        await this.getQuotations()
+        await this.getOrders()
+    }
 
-    this.orm = useService("orm")
-    this.actionService = useService("action")
-}
-
-  async onChangePeriod(){
-    this.getDates()
-    await this.getQuotations()
-    await this.getOrders()
-
-  }
-
-  getDates(){
-    this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
-    this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
-  }
-
+    getDates(){
+        this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
+        this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
+    }
   async getQuotations(){
     let domain = [['state', 'in', ['sent', 'draft']]]
     if (this.state.period > 0){
