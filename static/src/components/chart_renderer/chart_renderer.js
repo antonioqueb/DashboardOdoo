@@ -8,16 +8,15 @@ export class ChartRenderer extends Component {
     setup() {
         this.chartRef = useRef("chart")
         this.staticData = {
-            'Meses': ['Mayo', 'Junio', 'Julio'],
-            'Ventas netas': [139, 135, 139],
-            'Costo neto': [52, 54, 52],
-            'Total, Utilidad Bruta': [87, 80, 87],
-            'Total, Gasto de admón.': [7, 14, 6],
-            'Total, Gasto de Venta': [25, 23, 30],
-            'Total, en Gastos': [32, 37, 37],
-            'Impuestos Federales': [8, 7, 7],
-            'Utilidad Neta': [48, 37, 43]
-        };
+          'Meses': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            'Ventas netas': [120, 125, 130, 135, 139, 135, 139, 140, 145, 150, 155, 160],
+            'Costo neto': [50, 51, 52, 53, 52, 54, 52, 55, 56, 57, 58, 59],
+            'Total, Utilidad Bruta': [70, 74, 78, 82, 87, 81, 87, 85, 89, 93, 97, 101],
+            'Total, Gasto de admón.': [6, 7, 8, 9, 7, 14, 6, 10, 11, 12, 13, 14],
+            'Total, Gasto de Venta': [20, 21, 22, 23, 25, 23, 30, 31, 32, 33, 34, 35],
+            'Total, en Gastos': [26, 28, 30, 32, 32, 37, 36, 41, 43, 45, 47, 49],
+            'Impuestos Federales': [7, 7, 8, 8, 8, 7, 7, 9, 9, 10, 10, 11],
+            'Utilidad Neta': [37, 39, 40, 42, 47, 37, 44, 35, 37, 38, 40, 41
         onWillStart(async () => {
             await loadJS("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js")
         })
