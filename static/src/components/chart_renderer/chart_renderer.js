@@ -69,8 +69,8 @@ export class ChartRenderer extends Component {
                         label: 'Resumen de Resultados',
                         data: this.staticData['Ventas netas'],
                         fill: true,
-                        backgroundColor: ['#0439D9', '#395ab9', gradient1, gradient1, gradient4, gradient5],
                         borderColor: '#183b9c',
+                        backgroundColor: [gradient1, gradient1, gradient4, gradient5, gradient6, gradient7, gradient8,
                         tension: 0.1
                     },
                     {
