@@ -168,11 +168,11 @@ viewRevenues(){
 // Set the template and components for the Dashboard component.
 
 
-GerenciaPlaneacion.template = "TobaccoMetricsPro.GerenciaPlaneacion";
-GerenciaPlaneacion.components = { MetricCard, ChartRenderer};
+GerenciaProduccion.template = "TobaccoMetricsPro.GerenciaProduccion";
+GerenciaProduccion.components = { MetricCard, ChartRenderer};
 
 
 // Log to console when adding to the registry to confirm it's being executed  ... 
 console.log("Adding Dashboard to the registry");
 
-registry.category("actions").add("TobaccoMetricsPro.GerenciaPlaneacion", GerenciaPlaneacion);
+registry.category("actions").add("TobaccoMetricsPro.GerenciaProduccion", GerenciaProduccion);
