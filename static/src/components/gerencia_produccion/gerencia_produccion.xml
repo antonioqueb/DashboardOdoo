@@ -3,7 +3,7 @@
     <t t-name="TobaccoMetricsPro.GerenciaProduccion" owl="1">
         <div class="vh-100 overflow-auto bg-success">
             <!--  Div container Fluid Top -->
-
+            
             <!-- Div container Fluid Down-->    
         </div>        
     </t>
