@@ -61,7 +61,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
+                                <ChartRenderer type="'line'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
                 <!-- Puedes continuar agregando más gráficos según sea necesario -->
@@ -77,7 +77,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'doughnut'" title="'Top Sales People Report'"/>
+                                <ChartRenderer type="'line'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
                 <!-- Puedes continuar agregando más gráficos según sea necesario -->
