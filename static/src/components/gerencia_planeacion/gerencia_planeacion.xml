@@ -7,7 +7,7 @@
             <!-- Title -->
             <div class="row mx-3 py-3 bg-white shadow-sm rounded">
                 <div class="col-lg-10 d-flex align-items-center">
-                    <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
+                    <h1 class="text-primary fw-bold">Gerencia de Planeación</h1>
                 </div>
                 <div class="col-lg-2 d-flex align-items-center justify-content-center">
                     <div class="p-2">
@@ -32,7 +32,7 @@
                 <!-- Continuar con las demás tarjetas -->
                 <MetricCard onClick.bind="viewOrders" name="'Nivel de Servicio Interno'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Cuota de Mercado'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Puntualidad de Informes'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
 
             </div>
             <!-- End Card -->
