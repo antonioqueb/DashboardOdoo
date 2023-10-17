@@ -30,9 +30,8 @@
                 <MetricCard onClick.bind="viewOrders" name="'Cumplimiento del presupuesto'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Eficiencia en la utilización de recursos'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <!-- Continuar con las demás tarjetas -->
-                <MetricCard onClick.bind="viewOrders" name="'Costo por Unidad Producida o Entregada'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                <MetricCard onClick.bind="viewOrders" name="'Margen de contribución'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-
+                <MetricCard onClick.bind="viewOrders" name="'Costo por Unidad Producida'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Costo por Unidad Entregada'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
             </div>
             <!-- End Card -->
 
