@@ -48,7 +48,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
+                                <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
                     <!-- Graph 2 -->
@@ -60,7 +60,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
+                                <ChartRenderer type="'line'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
                 <!-- Puedes continuar agregando más gráficos según sea necesario -->
