@@ -18,9 +18,7 @@ export class GerenciaProduccion extends Component {
       console.log("Initial period:", this.state.period);  // Agrega esta línea
 
     this.orm = useService("orm")
-    console.log(this.orm)
     this.actionService = useService("action")
-    console.log(this.actionService)
 }
 
   async onChangePeriod(){
@@ -51,8 +49,6 @@ export class GerenciaProduccion extends Component {
     const prev_data = await this.orm.searchCount("sale.order", prev_domain)
     const percentage = ((data - prev_data)/prev_data) * 100
     this.state.quotations.percentage = percentage.toFixed(2)
-    console.log(this.state.quotations)
-    console.log(this.state.period)
 
 
 
@@ -167,14 +163,7 @@ viewRevenues(){
 
 
 
-// Set the template and components for the Dashboard component.
-
-
 GerenciaProduccion.template = "TobaccoMetricsPro.GerenciaProduccion";
 GerenciaProduccion.components = { MetricCard, ChartRenderer};
-
-
-// Log to console when adding to the registry to confirm it's being executed  ... 
-console.log("Adding Dashboard to the registry");
 
 registry.category("actions").add("TobaccoMetricsPro.GerenciaProduccion", GerenciaProduccion);
