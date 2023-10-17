@@ -47,18 +47,18 @@ export class ChartRenderer extends Component {
                 ],
                 datasets: [
                     {
-                        label: 'My First Dataset',
+                        label: 'Resumen de Resultados',
                         data: this.staticData['Ventas netas'],
                         fill: true,
-                        backgroundColor: color2,
+                        backgroundColor: '#0460D9',
                         borderColor: '#0439D9',
                         tension: 0.1
                     },
                     {
-                        label: 'My Second Dataset',
+                        label: 'Resumen de Resultados',
                         data: this.staticData['Costo neto'],
                         fill: true,
-                        backgroundColor: ,
+                        backgroundColor: '#027313',
                         borderColor: '#0460D9',
                         tension: 0.1
                     }]
