@@ -41,9 +41,7 @@ export class ChartRenderer extends Component {
             type: this.props.type,
             data: {
                 labels: [
-                    'Mayo',
-                    'Junio',
-                    'Julio'
+                    'Mayo', 'Junio', 'Julio', 'Agosto', "Septiembre",'Octubre'
                 ],
                 datasets: [
                     {
