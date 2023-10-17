@@ -15,6 +15,8 @@ export class GerenciaProduccion extends Component {
         period: 90,
 
     })
+      console.log("Initial period:", this.state.period);  // Agrega esta línea
+
     this.orm = useService("orm")
     console.log(this.orm)
     this.actionService = useService("action")
