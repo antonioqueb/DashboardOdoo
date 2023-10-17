@@ -16,6 +16,6 @@ while true; do
     # Realizar el commit
     git commit -m "$MSG_COMMIT"
 
-    # Esperar 45 segundos antes de la próxima iteración
-    sleep 45
+    # Esperar 60 segundos antes de la próxima iteración
+    sleep 60
 done
