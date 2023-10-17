@@ -36,13 +36,13 @@ export class ChartRenderer extends Component {
                                 label: 'Ventas netas',
                                 data: this.staticData['Ventas netas'],
                                 backgroundColor: 'rgb(86,134,13)', // Color actualizado
-                                borderColor: 'rgb(112,169,24)', // Color actualizado
+                                borderColor: 'rgb(70,107,14)', // Color actualizado
                                 borderWidth: 1
                             },
                             {
                                 label: 'Costo neto',
                                 data: this.staticData['Costo neto'],
-                                backgroundColor: 'rgba(123,169,24,0.95)', // Color actualizado
+                                backgroundColor: 'rgba(170,203,100,0.95)', // Color actualizado
                                 borderColor: 'rgba(130,175,35,0.89)', // Color actualizado
                                 borderWidth: 1
                             },
@@ -57,7 +57,7 @@ export class ChartRenderer extends Component {
                                 label: 'Gasto de admón.',
                                 data: this.staticData['Total, Gasto de admón.'],
                                 backgroundColor: 'rgba(169, 191, 3, 0.2)', // Color actualizado
-                                borderColor: 'rgba(169, 191, 3, 1)', // Color actualizado
+                                borderColor: 'rgb(192,213,32)', // Color actualizado
                                 borderWidth: 1
                             },
                             {
@@ -77,7 +77,7 @@ export class ChartRenderer extends Component {
                             {
                                 label: 'Utilidad Neta',
                                 data: this.staticData['Utilidad Neta'],
-                                backgroundColor: 'rgb(162,196,43)', // Reutilizando el color para el ejemplo
+                                backgroundColor: 'rgb(205,245,67)', // Reutilizando el color para el ejemplo
                                 borderColor: 'rgba(90, 114, 2, 1)', // Reutilizando el color para el ejemplo
                                 borderWidth: 1
                             }
