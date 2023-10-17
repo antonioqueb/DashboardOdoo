@@ -19,6 +19,7 @@ export class MetricCard extends Component {
             case 'Porcentaje de cumplimiento en RSE':
             case 'Crecimiento promedio por producto':
             case 'Cumplimiento Normativo':
+            case 'Margen de Utilidad':
                 formattedNumber = num.toFixed(1) + '%';
                 break;
             case 'Ventas':
