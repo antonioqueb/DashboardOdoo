@@ -53,7 +53,9 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
+                                <div class="chart-container" style="max-width: 500px; max-height: 500px;">
+                                    <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
+                                </div>
                             </div>
                         </div>
                     <!-- Graph 2 -->
@@ -65,7 +67,9 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'polarArea'" title="'Top Sales People Report'"/>
+                                     <div class="chart-container" style="max-width: 500px; max-height: 500px;">
+                                           <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
+                                   </div>
                             </div>
                         </div>
                 <!-- Puedes continuar agregando más gráficos según sea necesario -->
