@@ -32,56 +32,57 @@ export class ChartRenderer extends Component {
             data: {
                 labels: this.staticData['Meses'],
                 datasets: [
-                    {
-                        label: 'Ventas netas',
-                        data: this.staticData['Ventas netas'],
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Costo neto',
-                        data: this.staticData['Costo neto'],
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Utilidad Bruta',
-                        data: this.staticData['Total, Utilidad Bruta'],
-                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                        borderColor: 'rgba(153, 102, 255, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Gasto de admón.',
-                        data: this.staticData['Total, Gasto de admón.'],
-                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                        borderColor: 'rgba(255, 159, 64, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Gasto de Venta',
-                        data: this.staticData['Total, Gasto de Venta'],
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Impuestos Federales',
-                        data: this.staticData['Impuestos Federales'],
-                        backgroundColor: 'rgba(201, 203, 207, 0.2)',
-                        borderColor: 'rgba(201, 203, 207, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Utilidad Neta',
-                        data: this.staticData['Utilidad Neta'],
-                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                        borderColor: 'rgba(255, 206, 86, 1)',
-                        borderWidth: 1
-                    }
-                ]
+                            {
+                                label: 'Ventas netas',
+                                data: this.staticData['Ventas netas'],
+                                backgroundColor: 'rgb(86,134,13)', // Color actualizado
+                                borderColor: 'rgb(112,169,24)', // Color actualizado
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Costo neto',
+                                data: this.staticData['Costo neto'],
+                                backgroundColor: 'rgba(123,169,24,0.95)', // Color actualizado
+                                borderColor: 'rgba(130,175,35,0.89)', // Color actualizado
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Utilidad Bruta',
+                                data: this.staticData['Total, Utilidad Bruta'],
+                                backgroundColor: 'rgba(90, 114, 2, 0.2)', // Color actualizado
+                                borderColor: 'rgba(90, 114, 2, 1)', // Color actualizado
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Gasto de admón.',
+                                data: this.staticData['Total, Gasto de admón.'],
+                                backgroundColor: 'rgba(169, 191, 3, 0.2)', // Color actualizado
+                                borderColor: 'rgba(169, 191, 3, 1)', // Color actualizado
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Gasto de Venta',
+                                data: this.staticData['Total, Gasto de Venta'],
+                                backgroundColor: 'rgba(146, 165, 3, 0.2)', // Color actualizado
+                                borderColor: 'rgba(146, 165, 3, 1)', // Color actualizado
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Impuestos Federales',
+                                data: this.staticData['Impuestos Federales'],
+                                backgroundColor: 'rgb(141,192,24)', // Reutilizando el color para el ejemplo
+                                borderColor: 'rgb(70,100,9)', // Reutilizando el color para el ejemplo
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Utilidad Neta',
+                                data: this.staticData['Utilidad Neta'],
+                                backgroundColor: 'rgb(162,196,43)', // Reutilizando el color para el ejemplo
+                                borderColor: 'rgba(90, 114, 2, 1)', // Reutilizando el color para el ejemplo
+                                borderWidth: 1
+                            }
+                        ]
+
             },
             options: {
                 scales: {
