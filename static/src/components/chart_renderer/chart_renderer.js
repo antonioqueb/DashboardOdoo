@@ -50,7 +50,7 @@ export class ChartRenderer extends Component {
                         label: 'My First Dataset',
                         data: this.staticData['Ventas netas'],
                         fill: true,
-                        backgroundColor: gradient1,
+                        backgroundColor: color2,
                         borderColor: '#0439D9',
                         tension: 0.1
                     },
@@ -58,7 +58,7 @@ export class ChartRenderer extends Component {
                         label: 'My Second Dataset',
                         data: this.staticData['Costo neto'],
                         fill: true,
-                        backgroundColor: gradient2,
+                        backgroundColor: color1,
                         borderColor: '#0460D9',
                         tension: 0.1
                     }]
