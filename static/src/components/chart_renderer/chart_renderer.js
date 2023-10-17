@@ -70,14 +70,20 @@ export class ChartRenderer extends Component {
                         data: this.staticData['Ventas netas'],
                         fill: true,
                         borderColor: '#183b9c',
-                        backgroundColor: [gradient1, gradient1, gradient4, gradient5, gradient6, gradient7, gradient8,
+                        backgroundColor: ['gradient11', 'gradient12', 'gradient13', 'gradient14', 'gradient15',
+                                          'gradient16', 'gradient17', 'gradient18', 'gradient19', 'gradient20',
+                                          'gradient21', 'gradient22', 'gradient23', 'gradient24', 'gradient25',
+                                          'gradient26', 'gradient27', 'gradient28', 'gradient29', 'gradient30']
                         tension: 0.1
                     },
                     {
                         label: 'Resumen de Resultados',
                         data: this.staticData['Costo neto'],
                         fill: true,
-                        backgroundColor: ['#0439D9', '#395ab9', gradient1, gradient1, gradient4, gradient5],
+                        backgroundColor: ['gradient11', 'gradient12', 'gradient13', 'gradient14', 'gradient15',
+                                          'gradient16', 'gradient17', 'gradient18', 'gradient19', 'gradient20',
+                                          'gradient21', 'gradient22', 'gradient23', 'gradient24', 'gradient25',
+                                          'gradient26', 'gradient27', 'gradient28', 'gradient29', 'gradient30']
                         borderColor: '#297eea',
                         tension: 0.1
                     }]
