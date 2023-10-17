@@ -4,6 +4,23 @@
         <div class="vh-100 overflow-auto bg-body">
             <!--  Div container Fluid Top -->
 
+            <!-- Title -->
+            <div class="row">
+                <div class="col-9">
+                    <h1 class="text-center">Gerencia de Producción</h1>
+                </div>
+                <div class="col-3">
+                    <div>
+                           <select class="form-select" t-model="state.period" t-on-change="onChangePeriod">
+                               <option value="0">Seleccione Periodo</option>
+                               <option value="7">Last 7 Days</option>
+                               <option value="30">Last 30 Days</option>
+                               <option value="90">Last 90 Days</option>
+                               <option value="365">Last 365 Days</option>
+                           </select>
+                      </div>
+                </div>
+
             <!-- Div container Fluid Down-->    
         </div>        
     </t>
