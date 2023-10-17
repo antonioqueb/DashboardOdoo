@@ -53,13 +53,13 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <div class="chart-container" style="max-width: 500px; max-height: 500px;">
+                                <div class="chart-container" style="max-width: 500px; max-height: 750px;">
                                     <ChartRenderer type="'bar'" title="'Top Sales People Report'"/>
+                        <div class="col-lg-6 m-0 p-0">
                                 </div>
                             </div>
                         </div>
                     <!-- Graph 2 -->
-                        <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <h3 class="text-primary fw-bold">Crecimiento por producto</h3>
@@ -67,7 +67,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                     <div class="chart-container" style="max-width: 800px; ">
+                                     <div class="chart-container" style="max-width: 750px; ">
                                     <ChartRenderer type="'line'" title="'Top Sales People Report'"/>
                                    </div>
                             </div>
