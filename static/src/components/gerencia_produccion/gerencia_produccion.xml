@@ -26,8 +26,8 @@
             <!-- Start Card -->
             <div class="row my-4 justify-content-center">
                 <!-- Aquí puedes personalizar tus tarjetas métricas según sea necesario -->
-                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Kg / hr (Insumos primarios) alimentados'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Inactividad debido a equipos de servicios'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <!-- Continuar con las demás tarjetas -->
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
