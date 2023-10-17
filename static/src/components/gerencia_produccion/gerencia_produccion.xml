@@ -5,8 +5,8 @@
             <!-- Div container Fluid Top -->
 
             <!-- Title -->
-            <div class="row bg-success mx-lg-5">
-                <div class="col-lg-10 d-flex align-items-center justify-content-center">
+            <div class="row bg-body mx-lg-5">
+                <div class="col-lg-10 d-flex align-items-startr">
                     <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
                 </div>
                 <div class="col-lg-2 d-flex align-items-center justify-content-center bg-primary">
@@ -20,6 +20,11 @@
                            </select>
                       </div>
                 </div>
+
+
+
+
+
 
             <!-- Div container Fluid Down-->
             </div>
