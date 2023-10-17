@@ -25,11 +25,10 @@
 
 
             <!-- Start Card -->
-            <div class="row d-flex align-items-center justify-content-center">
+            <div class="row">
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
@@ -44,15 +43,16 @@
 
             <!-- Start Graph -->
             <div class="row mx-lg-5 py-3">
+                <!-- Graph  1 -->
+
                 <div class="col-lg-5 d-flex align-items-center">
-                    <!-- Graph  1 -->
                  <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
                 </div>
                        <!-- Graph  2 -->
-
+                <div class="col-lg-5 d-flex align-items-center">
                  <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
-
                 </div>
+
             </div>
 
 
