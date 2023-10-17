@@ -6,10 +6,10 @@
 
             <!-- Title -->
             <div class="row bg-success">
-                <div class="col-9">
+                <div class="col-10">
                     <h1 class="text-center">Gerencia de Producción</h1>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                     <div>
                            <select class="form-select" t-model="state.period" t-on-change="onChangePeriod">
                                <option value="0">Seleccione Periodo</option>
