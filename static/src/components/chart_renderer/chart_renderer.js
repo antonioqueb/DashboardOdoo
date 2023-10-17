@@ -41,25 +41,26 @@ export class ChartRenderer extends Component {
             type: this.props.type,
             data: {
                 labels: [
-                    'Red',
-                    'Blue',
-                    'Yellow'
+                    'Mayo',
+                    'Junio',
+                    'Julio'
                 ],
                 datasets: [
                     {
                         label: 'My First Dataset',
-                        data: [300, 50, 100],
-                        hoverOffset: 4,
+                        data: this.staticData['Ventas netas'],
+                        fill: true,
                         backgroundColor: gradient1,
                         borderColor: '#0439D9',
-                        borderWidth: 1
-                    }, {
+                        tension: 0.1
+                    },
+                    {
                         label: 'My Second Dataset',
-                        data: [100, 70, 150],
-                        hoverOffset: 4,
+                        data: this.staticData['Costo neto'],
+                        fill: true,
                         backgroundColor: gradient2,
                         borderColor: '#0460D9',
-                        borderWidth: 1
+                        tension: 0.1
                     }]
             },
             options: {
