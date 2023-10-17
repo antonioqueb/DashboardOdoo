@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                      <div class="chart-container" style="max-width: 800px; ">
-                                           <ChartRenderer type="'bar'" "/>
+                                           <ChartRenderer type="'bubble'"/>
                                    </div>
                             </div>
                         </div>
