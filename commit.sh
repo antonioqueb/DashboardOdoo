@@ -10,7 +10,7 @@ while true; do
     AÑO=$(date '+%Y')
     HORA=$(date '+%H:%M:%S')
 
-    # Construir el mensaje de commit
+    # Construir el mensaje de commit con la fecha
     MSG_COMMIT="Desarrollo de la semana #$SEMANA de producción de TobaccoMetricsPro -  $HORA"
 
     # Realizar el commit
@@ -19,6 +19,6 @@ while true; do
     # Subir los cambios al repositorio remoto en la rama "main"
     git push origin main  # Asegúrate de ajustar "origin" y "main" según tu configuración
 
-    # Esperar 60 segundos antes de la próxima iteración
+    # Esperar 60 segundos antes de la próxima iteración parta evitar sobrecargar el servidor
     sleep 60
 done
