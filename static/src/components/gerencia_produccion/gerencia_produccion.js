@@ -64,7 +64,7 @@ async getOrders(){
       domain.push(['date_order','>', this.state.current_date])
   }
   const data = await this.orm.searchCount("sale.order", domain)
-  //this.state.quotations.value = data
+  //this.state.quotations.value = data  ok?
 
   // previous period
   let prev_domain = [['state', 'in', ['sale', 'done']]]
