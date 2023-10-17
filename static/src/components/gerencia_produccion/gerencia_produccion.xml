@@ -30,6 +30,10 @@
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <!-- Continuar con las demás tarjetas -->
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+
             </div>
             <!-- End Card -->
 
