@@ -65,7 +65,7 @@
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'radar'" title="'Top Sales People Report'"/>
+                                <ChartRenderer type="'bubble'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
                 <!-- Puedes continuar agregando más gráficos según sea necesario -->
