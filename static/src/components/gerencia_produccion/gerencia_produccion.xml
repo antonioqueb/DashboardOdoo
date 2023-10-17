@@ -5,7 +5,7 @@
             <!-- Div container Fluid Top -->
 
             <!-- Title -->
-            <div class="row mx-lg-5 py-3"> <!-- Agregado padding vertical para espacio adicional arriba y abajo -->
+            <div class="row mx-lg-5 py-3 bg-muted">
                 <div class="col-lg-10 d-flex align-items-center">
                     <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
                 </div>
@@ -62,6 +62,5 @@
             <!-- End Graph -->
 
 
-        </div>
     </t>
 </templates>
