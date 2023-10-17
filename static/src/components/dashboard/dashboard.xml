@@ -1,50 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
     <t t-name="TobaccoMetricsPro.Dashboard" owl="1">
-        <div class="vh-100 overflow-auto bg-muted">
-            <div class="row m-3">
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h1 class="text-primary fw-bold">Dashboard Dirección General</h1>
-                                    <div>
-                                        <select class="form-select" t-model="state.period" t-on-change="onChangePeriod">
-                                            <option value="0">Select Period</option>
-                                            <option value="7">Last 7 Days</option>
-                                            <option value="30">Last 30 Days</option>
-                                            <option value="90">Last 90 Days</option>
-                                            <option value="365">Last 365 Days</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <MetricCard onClick.bind="viewOrders" name="'Ventas'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                        <MetricCard onClick.bind="viewOrders" name="'Costos'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                        <MetricCard onClick.bind="viewOrders" name="'Utilidad'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                        <MetricCard onClick.bind="viewOrders" name="'Calidad'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+        <div class="vh-100 overflow-auto p-4 bg-light">
+            <!-- Div container Fluid Top -->
 
+            <!-- Title -->
+            <div class="row mx-3 py-3 bg-white shadow-sm rounded">
+                <div class="col-lg-10 d-flex align-items-center">
+                    <h1 class="text-primary fw-bold">Gerencia de Producción</h1>
+                </div>
+                <div class="col-lg-2 d-flex align-items-center justify-content-center">
+                    <div class="p-2">
+                        <select class="form-select shadow-sm border-0 rounded" t-model="state.period" t-on-change="onChangePeriod">
+                            <option value="0">Seleccione Periodo</option>
+                            <option value="7">Last 7 Days</option>
+                            <option value="30">Last 30 Days</option>
+                            <option value="90">Last 90 Days</option>
+                            <option value="365">Last 365 Days</option>
+                        </select>
                     </div>
-                    <div class="row">
+                </div>
+            </div>
+            <!-- End Title -->
+
+            <!-- Start Card -->
+            <div class="row my-4 justify-content-center">
+                <!-- Aquí puedes personalizar tus tarjetas métricas según sea necesario -->
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <!-- Continuar con las demás tarjetas -->
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+
+            </div>
+            <!-- End Card -->
+
+            <!-- Start Graph -->
+            <div class="row p-2 my-4 justify-content-center">
+                <!-- Graph 1 -->
                         <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Resumen de Resultados</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Crecimiento por producto</h3>
+                                    <h3 class="text-primary fw-bold">Tasa de Entrega a tiempo</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
@@ -52,115 +51,21 @@
                                 <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="row">
-                        <div class="col m-0 p-0">
+                    <!-- Graph 2 -->
+                        <div class="col-lg-6 m-0 p-0">
                             <div class="shadow-sm border m-2 p-4 bg-white">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">ROI</h3>
+                                    <h3 class="text-primary fw-bold">Tasa de Entrega a tiempo</h3>
                                     <div class="px-3 py-1 bg-green cursor-pointer">
                                         <span class="fa fa-arrow-right text-white"/>
                                     </div>
                                 </div>
-                                <ChartRenderer type="'line'" title="'Monthly Sales Report'"/>
+                                <ChartRenderer type="'pie'" title="'Top Sales People Report'"/>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Capital Humano</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Cumplimiento Normativo</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Eficiencia</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                                        <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Crecimiento Total por producto promedi</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Margen de Utilidad</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Cuota de Mercado</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                      <div class="row">
-                        <div class="col m-0 p-0">
-                            <div class="shadow-sm border m-2 p-4 bg-white">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h3 class="text-primary fw-bold">Porcentaje de realización de la Responsabilidad Social prevista</h3>
-                                    <div class="px-3 py-1 bg-green cursor-pointer">
-                                        <span class="fa fa-arrow-right text-white"/>
-                                    </div>
-                                </div>
-                                <ChartRenderer type="'line'" title="'Partner Orders Report'"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Puedes continuar agregando más gráficos según sea necesario -->
             </div>
+            <!-- End Graph -->
         </div>
     </t>
 </templates>
