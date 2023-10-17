@@ -28,10 +28,10 @@
                 <!-- Aquí puedes personalizar tus tarjetas métricas según sea necesario -->
                 <MetricCard onClick.bind="viewOrders" name="'Precisión de Pronóstico de Demanda'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Precisión de Pronóstico de Demanda'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Tasa de Agotamiento de Stock'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <!-- Continuar con las demás tarjetas -->
-                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
-                <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Nivel de Servicio Interno'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Cuota de Mercado'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <MetricCard onClick.bind="viewOrders" name="'Demanda Actual'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
 
             </div>
