@@ -41,25 +41,25 @@
 
 
 
-            <!-- Start Graph -->
-            <div class="row mx-lg-5 py-3">
-                <!-- Graph  1 -->
+                <!-- Start Graph -->
+                <div class="row mx-lg-5 py-3">
+                    <!-- Graph  1 -->
 
-                <div class="col-lg-5 d-flex align-items-center">
-                 <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
-                </div>
-                       <!-- Graph  2 -->
-                <div class="col-lg-5 d-flex align-items-center">
-                 <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
-                </div>
+                    <div class="col-lg-5 d-flex align-items-center">
+                     <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
+                    </div>
+                           <!-- Graph  2 -->
+                    <div class="col-lg-5 d-flex align-items-center">
+                     <ChartRenderer type="'doughnut'" title="'Top Products Report'"/>
+                    </div>
 
-            </div>
+                </div>
 
 
 
 
             <!-- End Graph -->
 
-
+        </div>
     </t>
 </templates>
