@@ -9,29 +9,33 @@ const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 export class Plantilla extends Component {
   setup(){
+        this.state = useState({
+            quotations: {
+                value:10,
+                percentage:6,
+            },
+            period:90,
+        })
+        this.orm = useService("orm")
+        this.actionService = useService("action")
 
-    this.state = useState({
-        quotations: {},
-        period: 90,
+        onWillStart(async ()=>{
+            this.getDates()
+            await this.getQuotations()
+            await this.getOrders()
+        })
+    }
 
-    })
-    this.orm = useService("orm")
-    console.log(this.orm)
-    this.actionService = useService("action")
-    console.log(this.actionService)
-}
+    async onChangePeriod(){
+        this.getDates()
+        await this.getQuotations()
+        await this.getOrders()
+    }
 
-  async onChangePeriod(){
-    this.getDates()
-    await this.getQuotations()
-    await this.getOrders()
-
-  }
-
-  getDates(){
-    this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
-    this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
-  }
+    getDates(){
+        this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
+        this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
+    }
 
   async getQuotations(){
     let domain = [['state', 'in', ['sent', 'draft']]]
@@ -168,11 +172,11 @@ viewRevenues(){
 // Set the template and components for the Dashboard component.
 
 
-Plantilla.template = "TobaccoMetricsPro.Plantilla";
+Plantilla.template = "TobaccoMetricsPro.Gerencia_rrhh";
 Plantilla.components = { MetricCard, ChartRenderer};
 
 
 // Log to console when adding to the registry to confirm it's being executed  ... 
 console.log("Adding Dashboard to the registry");
 
-registry.category("actions").add("TobaccoMetricsPro.Plantilla", Plantilla);
+registry.category("actions").add("TobaccoMetricsPro.Gerencia_rrhh", Plantilla);
