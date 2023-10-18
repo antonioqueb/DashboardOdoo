@@ -23,6 +23,11 @@
         <field name="tag">TobaccoMetricsPro.GerenciaProduccion</field>
     </record>
 
+    <record id="action_open_dashboard_rrhh" model="ir.actions.client">
+        <field name="name">Gerencia de RRHH</field>
+        <field name="tag">TobaccoMetricsPro.Gerencia_rrhh</field>
+    </record>
+
     <!-- Menú principal -->
     <menuitem id="menu_dashboard"
               name="Tobacco Metrics Pro"
@@ -69,6 +74,12 @@
               name="Gerencia de Producción"
               action="action_open_dashboard_prod"
               sequence="45"
+              parent="menu_gerencia"/>
+
+    <menuitem id="menu_dashboard_gerentes_rrhh"
+              name="Gerencia de RRHH"
+              action="action_open_dashboard_rrhh"
+              sequence="50"
               parent="menu_gerencia"/>
 
     <!-- Puedes agregar ítems bajo el submenú Jefaturas aquí según sea necesario -->
