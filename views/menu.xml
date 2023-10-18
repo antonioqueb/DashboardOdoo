@@ -82,19 +82,19 @@
     <menuitem id="menu_dashboard_gerentes_financieros"
               name="Gerencia Financiera"
               action="action_open_dashboard_gf"
-              sequence="40"
+              sequence="36"
               parent="menu_gerencia"/>
 
     <menuitem id="menu_dashboard_gerentes_produccion"
               name="Gerencia de Producción"
               action="action_open_dashboard_prod"
-              sequence="45"
+              sequence="37"
               parent="menu_gerencia"/>
 
     <menuitem id="menu_dashboard_gerentes_rrhh"
               name="Gerencia de RRHH"
               action="action_open_dashboard_rrhh"
-              sequence="50"
+              sequence="38"
               parent="menu_gerencia"/>
 
     <menuitem id="menu_dashboard_gerentes_adm_rrhh"
@@ -106,13 +106,13 @@
     <menuitem id="menu_dashboard_gerentes_marketing"
               name="Gerencia de Marketing"
               action="action_open_dashboard_gerencia_marketing"
-              sequence="55"
+              sequence="39"
               parent="menu_gerencia"/>
 
     <menuitem id="menu_dashboard_gerentes_auditoria"
                 name="Gerencia de Auditoría"
                 action="action_open_dashboard_gerencia_auditoria"
-                sequence="55"
+                sequence="40"
                 parent="menu_gerencia"/>
 
 
