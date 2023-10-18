@@ -3,18 +3,23 @@
     <t t-name="TobaccoMetricsPro.MetricCard" owl="1">
         <div class="col-lg-4 m-0-p-0">
             <div class="shadow-sm border m-1 p-2 bg-white text-center">
+                <!-- Elemento canvas para el gráfico -->
+                <canvas ref="chart" class="my-2" width="400" height="200"></canvas>
+
                 <!-- Usando formattedValue que se calcula en el componente JavaScript -->
-                <div class="h1 fw-bold text-dark" style="font-size:25px"><span t-esc="formattedValue" /></div>
+                <div class="h1 fw-bold text-dark" style="font-size:25px">
+                    <span t-esc="formattedValue"/>
+                </div>
                 <div class="h3 text-muted" style="font-size:20px">
-                    <span t-esc="props.name" />
+                    <span t-esc="props.name"/>
                 </div>
                 <div class="h3 mt-3">
                     <span t-attf-class="text-#{ props.porcentage > 0 ? 'success':'danger'}">
                         <span t-attf-class="me-1 fa fa-arrow-#{ props.porcentage > 0 ? 'up':'down'}">
-                            <span t-esc="props.porcentage" />%
+                            <span t-esc="props.porcentage"/>%
                         </span>
                     </span>
-                    <span style="font-size:12px"> desde el ultimo periodo.</span>
+                    <span style="font-size:12px"> desde el último periodo.</span>
                 </div>
             </div>
         </div>
