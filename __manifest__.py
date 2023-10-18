@@ -5,7 +5,7 @@
     'summary': 'Herramientas de análisis y visualización para la industria tabacalera.',
     'author': 'Antonio Queb',
     'website': 'https://www.fingrow.co',
-    'depends': ['base', 'web', 'sale','board', 'purchase'],
+    'depends': ['base', 'web', 'board', 'sale','purchase'],
     'assets': {
     'web.assets_backend': [
         'TobaccoMetricsPro/static/src/components/**/**.js',
