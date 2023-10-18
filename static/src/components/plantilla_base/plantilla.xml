@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="TobaccoMetricsPro.Plantilla" owl="1">
+    <t t-name="TobaccoMetricsPro.Gerencia_marketing" owl="1">
         <div class="vh-100 overflow-auto p-4 bg-light">
             <!-- Div container Fluid Top -->
 
