@@ -41,7 +41,7 @@
 
     <record id="action_open_dashboard_gerencia_auditoria" model="ir.actions.client">
         <field name="name">Gerencia de Auditoría</field>
-        <field name="tag">TobaccoMetricsPro.Gerencia_auditoria_</field>
+        <field name="tag">TobaccoMetricsPro.Gerencia_auditoria</field>
     </record>
 
     <record id="action_open_dashboard_gerencia_suministros" model="ir.actions.client">
