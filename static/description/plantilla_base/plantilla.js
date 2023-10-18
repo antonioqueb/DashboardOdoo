@@ -1,8 +1,8 @@
 /** @odoo-module */
 
 import { registry } from "@web/core/registry";
-import { MetricCard } from "../metric_card/metric_card.js";
-import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
+import { MetricCard } from "../../src/components/metric_card/metric_card.js";
+import { ChartRenderer } from "../../src/components/chart_renderer/chart_renderer.js";
 import { useService } from "@web/core/utils/hooks"
 const { Component, onWillStart, useRef, onMounted, useState } = owl
 
