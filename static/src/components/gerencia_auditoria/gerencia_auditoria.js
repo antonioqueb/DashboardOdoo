@@ -7,7 +7,7 @@ import { useService } from "@web/core/utils/hooks"
 const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 
-export class Gerencia_auditoria_ extends Component {
+export class Gerencia_auditoria extends Component {
   setup(){
         this.state = useState({
             quotations: {
@@ -171,11 +171,11 @@ viewRevenues(){
 // Set the template and components for the Dashboard component.
 
 
-Gerencia_auditoria_.template = "TobaccoMetricsPro.Gerencia_auditoria_";
-Gerencia_auditoria_.components = { MetricCard, ChartRenderer};
+Gerencia_auditoria.template = "TobaccoMetricsPro.Gerencia_auditoria_";
+Gerencia_auditoria.components = { MetricCard, ChartRenderer};
 
 
 // Log to console when adding to the registry to confirm it's being executed  ... 
 console.log("Adding Dashboard to the registry");
 
-registry.category("actions").add("TobaccoMetricsPro.Gerencia_auditoria_", Gerencia_auditoria_);
+registry.category("actions").add("TobaccoMetricsPro.Gerencia_auditoria_", Gerencia_auditoria);
