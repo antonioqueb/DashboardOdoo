@@ -92,11 +92,11 @@
               sequence="50"
               parent="menu_gerencia"/>
 
-    <menuitem id="menu_dashboard_gerentes_adm_rrhh"
-                name="Gerencia de Administración de RRHH"
-                action="action_open_dashboard_gerencia_adm_rrhh"
-                sequence="55"
-                parent="menu_gerencia"/>
+    <menuitem id="menu_dashboard_gerentes_marketing"
+              name="Gerencia de Marketing"
+              action="action_open_dashboard_gerencia_marketing"
+              sequence="55"
+              parent="menu_gerencia"/>
 
 
     <!-- Puedes agregar ítems bajo el submenú Jefaturas aquí según sea necesario -->
