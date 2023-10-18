@@ -109,6 +109,12 @@
               sequence="55"
               parent="menu_gerencia"/>
 
+    <menuitem id="menu_dashboard_gerentes_auditoria"
+                name="Gerencia de Auditoría"
+                action="action_open_dashboard_gerencia_auditoria"
+                sequence="55"
+                parent="menu_gerencia"/>
+
 
     <!-- Puedes agregar ítems bajo el submenú Jefaturas aquí según sea necesario -->
 
