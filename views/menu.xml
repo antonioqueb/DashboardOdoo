@@ -43,6 +43,7 @@
         <field name="name">Gerencia de Auditoría</field>
         <field name="tag">TobaccoMetricsPro.Gerencia_auditoria</field>
     </record>
+    
     <!-- Menú principal -->
     <menuitem id="menu_dashboard"
               name="Tobacco Metrics Pro"
