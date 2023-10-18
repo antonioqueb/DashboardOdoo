@@ -44,6 +44,11 @@
         <field name="tag">TobaccoMetricsPro.Gerencia_auditoria_</field>
     </record>
 
+    <record id="action_open_dashboard_gerencia_suministros" model="ir.actions.client">
+        <field name="name">Gerencia de Suministros</field>
+        <field name="tag">TobaccoMetricsPro.GerenciaSuministros</field>
+    </record>
+
     <!-- Menú principal -->
     <menuitem id="menu_dashboard"
               name="Tobacco Metrics Pro"
@@ -111,6 +116,12 @@
                 name="Gerencia de Auditoría"
                 action="action_open_dashboard_gerencia_auditoria"
                 sequence="40"
+                parent="menu_gerencia"/>
+
+    <menuitem id="menu_dashboard_gerentes_suministros"
+                name="Gerencia de Suministros"
+                action="action_open_dashboard_gerencia_suministros"
+                sequence="41"
                 parent="menu_gerencia"/>
 
 
