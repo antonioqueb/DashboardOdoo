@@ -31,6 +31,8 @@
                 <MetricCard onClick.bind="viewOrders" name="'Capacitación y desarrollo'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
                 <!-- Continuar con las demás tarjetas -->
                 <MetricCard onClick.bind="viewOrders" name="'Desempeño del equipo'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Rotación de Empleados'" value="state.employeeTurnover ? state.employeeTurnover.value : 'Loading...'" percentage="state.employeeTurnover ? state.employeeTurnover.percentage : 'Loading...'"/>
+                <MetricCard onClick.bind="viewOrders" name="'Desempeño del equipo'" value="state.orders ? state.orders.value : 'Loading...'" percentage="state.orders ? state.orders.percentage : 'Loading...'"/>
 
             </div>
             <!-- End Card -->
