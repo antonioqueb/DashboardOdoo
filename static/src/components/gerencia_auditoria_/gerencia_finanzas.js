@@ -1,13 +1,13 @@
 /** @odoo-module */
 
 import { registry } from "@web/core/registry";
-import { MetricCard } from "../../src/components/metric_card/metric_card.js";
-import { ChartRenderer } from "../../src/components/chart_renderer/chart_renderer.js";
+import { MetricCard } from "../metric_card/metric_card.js";
+import { ChartRenderer } from "../chart_renderer/chart_renderer.js";
 import { useService } from "@web/core/utils/hooks"
 const { Component, onWillStart, useRef, onMounted, useState } = owl
 
 
-export class Gerencia_auditoria extends Component {
+export class GerenciaFinanciera extends Component {
   setup(){
         this.state = useState({
             quotations: {
@@ -36,7 +36,6 @@ export class Gerencia_auditoria extends Component {
         this.state.current_date = moment().subtract(this.state.period, 'days').format('L')
         this.state.previous_date = moment().subtract(this.state.period * 2, 'days').format('L')
     }
-
   async getQuotations(){
     let domain = [['state', 'in', ['sent', 'draft']]]
     if (this.state.period > 0){
@@ -68,7 +67,7 @@ async getOrders(){
       domain.push(['date_order','>', this.state.current_date])
   }
   const data = await this.orm.searchCount("sale.order", domain)
-  //this.state.quotations.value = data  ok? yes
+  //this.state.quotations.value = data
 
   // previous period
   let prev_domain = [['state', 'in', ['sale', 'done']]]
@@ -172,11 +171,11 @@ viewRevenues(){
 // Set the template and components for the Dashboard component.
 
 
-Gerencia_auditoria.template = "TobaccoMetricsPro.Gerencia_auditoria";
-Gerencia_auditoria.components = { MetricCard, ChartRenderer};
+GerenciaFinanciera.template = "TobaccoMetricsPro.GerenciaFinanciera";
+GerenciaFinanciera.components = { MetricCard, ChartRenderer};
 
 
 // Log to console when adding to the registry to confirm it's being executed  ... 
 console.log("Adding Dashboard to the registry");
 
-registry.category("actions").add("TobaccoMetricsPro.Gerencia_auditoria", Gerencia_auditoria);
+registry.category("actions").add("TobaccoMetricsPro.GerenciaFinanciera", GerenciaFinanciera);
