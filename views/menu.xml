@@ -51,7 +51,7 @@
 
     <!-- Menú principal -->
     <menuitem id="menu_dashboard"
-              name="Tobacco Metrics Pro"
+              name="Metrics Pro"
               action="action_open_dashboard_dg"
               sequence="10"/>
 
